@@ -15,8 +15,8 @@ class CreateProjetsTable extends Migration
     {
         Schema::create('projets', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('libelle');
-            $table->string('sujet');
+            $table->string('libelle',50);
+            $table->string('sujet',50);
             $table->unsignedBigInteger('enseignant_id');
             $table->timestamps();
             $table->foreign('enseignant_id')->references('id')->on('enseignants')->onDelete('restrict')->onUpdate('restrict');
