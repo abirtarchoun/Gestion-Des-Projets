@@ -15,11 +15,11 @@ class CreateEtudiantsTable extends Migration
     {
         Schema::create('etudiants', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('email')->unique();
-            $table->string('username');
-            $table->string('password');
+            $table->string('nom',50);
+            $table->string('prenom',50);
+            $table->string('email',100)->unique();
+            $table->string('username',50);
+            $table->string('password',50);
             $table->timestamps();
         });
     }
