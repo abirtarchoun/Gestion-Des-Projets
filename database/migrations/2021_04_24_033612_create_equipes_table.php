@@ -15,7 +15,7 @@ class CreateEquipesTable extends Migration
     {
         Schema::create('equipes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('libelle');
+            $table->string('libelle',50);
             $table->unsignedBigInteger('projet_id');
             $table->timestamps();
             $table->foreign('projet_id')->references('id')->on('projets')->onDelete('restrict')->onUpdate('restrict');
