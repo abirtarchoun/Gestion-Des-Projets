@@ -1,8 +1,8 @@
 <?php
-use App\Etudiant;
+use App\Projet;
 use Illuminate\Database\Seeder;
 
-class EtudiantsTableSeeder extends Seeder
+class ProjetsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class EtudiantsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Etudiant::class,12)->create();
+       
+        factory(Projet::class,8)->create();
     }
 }
-
