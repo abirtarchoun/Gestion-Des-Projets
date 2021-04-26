@@ -13,7 +13,7 @@ class CreateEtudiantProjetsTable  extends Migration
      */
     public function up()
     {
-        Schema::create('etudiant__projets', function (Blueprint $table) {
+        Schema::create('etudiant__projet', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('etudiant_id');
             $table->unsignedBigInteger('projet_id');
@@ -29,6 +29,6 @@ class CreateEtudiantProjetsTable  extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('etudiant__projets');
+        Schema::dropIfExists('etudiant__projet');
     }
 }
