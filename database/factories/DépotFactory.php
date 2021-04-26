@@ -15,8 +15,8 @@ $factory->define(Dépot::class, function (Faker $faker) {
 
            'datedepot'=>$faker->date,
            'datefinal'=>$faker->date,
-           'note'=>$faker->randomfloat(2),
-           'sujet'=>$faker->sentence,
+           'note'=>$faker->randomfloat(2,0,9),
+           'sujet'=>$faker->word,
            'contenu'=>$faker->word,
            'enseignant_id'=>Enseignant::get('id')->random(),
            'etudiant_id'=>Etudiant::get('id')->random(),
