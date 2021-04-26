@@ -19,6 +19,7 @@ class CreateDépotsTable extends Migration
             $table->dateTimeTz('datefinal', 0);
             $table->float('note', 8, 2);
             $table->string('sujet',50);
+            $table->string('contenu',50);
             $table->unsignedBigInteger('enseignant_id');
             $table->unsignedBigInteger('etudiant_id');
             $table->unsignedBigInteger('projet_id');
