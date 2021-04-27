@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEtudiantProjetsTable  extends Migration
+class CreateEtudiantNequipeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateEtudiantProjetsTable  extends Migration
      */
     public function up()
     {
-        Schema::create('etudiant__projet', function (Blueprint $table) {
+        Schema::create('etudiant_nequipe', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('etudiant_id');
-            $table->unsignedBigInteger('projet_id');
+            $table->unsignedBigInteger('equipe_id');
             $table->timestamps();
-          
+            $table->foreign('etudiant_id')->references('id')->on('etudiants')->nDelete('restrict')->onUpdate('restrict');
+            $table->foreign('equipe_id')->references('id')->on('equipes')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 
@@ -29,6 +30,6 @@ class CreateEtudiantProjetsTable  extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('etudiant__projet');
+        Schema::dropIfExists('etudiant_nequipe');
     }
 }
