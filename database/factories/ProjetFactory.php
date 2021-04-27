@@ -10,7 +10,7 @@ $factory->define(Projet::class, function (Faker $faker) {
     return [
         
         'libelle'=>$faker->word,
-        'sujet'=>$faker->sentence,
+        'sujet'=>$faker->word,
         'enseignant_id'=>Enseignant::get('id')->random(),
 
     ];
