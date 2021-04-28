@@ -17,14 +17,14 @@ class Etudiant extends Model
    public function projets()
     {
 
-      return $this->belongsToMany('App\Projet','etudiant_projet');
+      return $this->belongsToMany('App\Projet');
       
     }
 
     public function equipes()
     {
 
-      return $this->belongsToMany('App\Equipe','etudiant_nequipe');
+      return $this->belongsToMany('App\Equipe');
 
     }
 }

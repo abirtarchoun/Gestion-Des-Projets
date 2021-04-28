@@ -16,6 +16,6 @@ class Projet extends Model
     public function etudiants()
     {
 
-      return $this->belongsToMany('App\Etudiant','etudiant_projet');
+      return $this->belongsToMany('App\Etudiant');
     }
 }

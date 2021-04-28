@@ -1,5 +1,6 @@
 <?php
 
+use App\EtudiantNequipe;
 use Illuminate\Database\Seeder;
 
 class EtudiantNequipesTableSeeder extends Seeder
@@ -11,6 +12,6 @@ class EtudiantNequipesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(EtudiantNequipe::class,9);
+        factory(EtudiantNequipe::class,9)->create();
     }
 }

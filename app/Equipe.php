@@ -9,6 +9,6 @@ class Equipe extends Model
     public function etudiants()
     {
 
-      return $this->belongsToMany('App\Etudiant','etudiant_nequipe');
+      return $this->belongsToMany('App\Etudiant');
     }
 }
