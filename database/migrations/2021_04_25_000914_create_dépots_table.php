@@ -17,7 +17,7 @@ class CreateDépotsTable extends Migration
             $table->bigIncrements('id');
             $table->dateTimeTz('datedepot', 0);
             $table->dateTimeTz('datefinal', 0);
-            $table->float('note', 8, 2);
+            $table->float('note',2,0,9);
             $table->string('sujet',30);
             $table->string('contenu',50);
             $table->unsignedBigInteger('enseignant_id');

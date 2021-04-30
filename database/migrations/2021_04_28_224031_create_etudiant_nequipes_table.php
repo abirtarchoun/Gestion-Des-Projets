@@ -14,7 +14,7 @@ class CreateEtudiantNequipesTable extends Migration
     public function up()
     {
         Schema::create('etudiant_nequipes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+          
             $table->unsignedBigInteger('etudiant_id');
             $table->unsignedBigInteger('equipe_id');
             $table->timestamps();
