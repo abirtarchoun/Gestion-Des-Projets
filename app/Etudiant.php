@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Etudiant extends Model
 {
-    public function dépot()
+    public function dépots()
     {
 
-        return $this->belongsTo('App\Dépot');
+        return $this->hasMany('App\Dépot');
     }
 
 

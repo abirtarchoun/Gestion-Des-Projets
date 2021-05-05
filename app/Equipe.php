@@ -11,4 +11,17 @@ class Equipe extends Model
 
       return $this->belongsToMany('App\Etudiant');
     }
+
+    public function depots()
+    {
+
+      return $this->hasMany('App\Dépot');
+    }
+
+    public function projet()
+    {
+
+      return $this->belongsTo('App\Projet');
+    }
+
 }
