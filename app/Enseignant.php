@@ -10,9 +10,9 @@ class Enseignant extends Model
     {
         return $this->hasMany('App\Projet');
     }
-     public function dépot()
+     public function depots()
      {
-    return $this->belongsTo('App\Dépot');
+    return $this->hasMany('App\Dépot');
      }
     
 }

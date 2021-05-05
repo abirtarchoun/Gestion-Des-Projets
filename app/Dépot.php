@@ -6,13 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dépot extends Model
 {
-    public function enseignants()
+   
+    public function enseignant()
     {
-        return $this->hasMany('App\Enseignant');
+        return $this->BelongsTo('App\Enseignant');
+    }
+    public function projet()
+    {
+        return $this->BelongsTo('App\Projet');
     }
 
-    public function etudiants()
+
+    public function etudiant()
     {
-        return $this->hasMany('App\Etudiant');
+        return $this->BelongsTo('App\Etudiant');
+    }
+
+    public function equipe()
+    {
+        return $this->BelongsTo('App\Equipe');
     }
 }
