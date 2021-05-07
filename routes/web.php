@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', function () {
-    return view('admin.dashborad');
+  //Route::get('/admin', function () {
+    //return view('admin.dashborad');
+//});
+Route::get('/Ens', function () {
+    return view('Ens.Enseignant');
 });
