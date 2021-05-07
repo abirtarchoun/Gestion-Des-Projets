@@ -13,4 +13,9 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .styles( 'resources/css/dashborad.css','public/css/admin.css');
+    .styles( 'resources/css/templete.css','public/css/templete.css')
+    
+    .scripts(
+        'resources/js/templete.js', 'public/js/temp.js')
+    
+        .copyDirectory('resources/img', 'public/img');
