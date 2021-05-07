@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Etudiant;
+use App\Projet;
+use Faker\Guesser\Name;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,6 +30,16 @@ class HomeController extends Controller
     }
 
     public function Welcome(){
+        $student= Etudiant::inRandomOrder()->limit(6)->get();
+
+
+
+        $project=Projet::inRandomOrder()->limit(6)->get();
+
+
+
+
+
         return view('welcome');
     }
 }
