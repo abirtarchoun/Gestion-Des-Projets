@@ -1,5 +1,6 @@
 @extends('layouts.app')
- @section('content')
+
+
   <!-- Favicons -->
   <link href="{{ asset('img/favicon.png')}}" rel="icon">
   <link href="{{ asset('img/apple-touch-icon.png')}}"  rel="apple-touch-icon">
@@ -14,11 +15,11 @@
   <link href="{{ asset('boxicons/css/boxicons.min.css')}}" rel="stylesheet">
   <link href="{{ asset('remixicon/remixicon.css')}}" rel="stylesheet">
   <link href="{{ asset('owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="{{ asset('animate.css/animate.min.css')}}"rel="stylesheet">-->
+  <link href="{{ asset('animate.css/animate.min.css')}}"rel="stylesheet">
   <link href="{{ asset('aos/aos.css')}}" rel="stylesheet">
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    @section('content')
+   @section('content')
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto"><a href="index.html">Mentor</a></h1>
       <nav class="nav-menu d-none d-lg-block">
@@ -29,7 +30,7 @@
           <li><a href="trainers.html">Trainers</a></li>
            <li class="drop-down"><a href="#"><i class="material-icons"> Equipes </i></a>
 	      <ul class="sub-menu">
-		<li><a href="all_professors.html" class="nav-link "> <span class="title">All Equips</span></a></li>
+		<li><a href="all_professors.html" class="nav-link "> <span class="title">All Equipes</span></a></li>
         </ul>
         <li class="drop-down"><a href="#"><i class="material-icons"> Projects </i></a>
 	      <ul class="sub-menu">
@@ -43,15 +44,13 @@
 	     <li class="drop-down"><a href="#"><i class="material-icons">Professors</i></a>
 	     <ul class="sub-menu">
 		<li>
-       <a href="all_professors.html" class="nav-link "> <span class="title">All Professors</span></a></li>
+       <a href="/enseignants" class="nav-link "> <span class="title">All Professors</span></a></li>
       </nav>
       <!-- .nav-menu -->
-
       <a href="courses.html" class="get-started-btn">Get Started</a>
 
     </div>
-  </header><!-- End Header -->
-
+  </header>
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
@@ -62,7 +61,6 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">

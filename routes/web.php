@@ -25,3 +25,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Ens', function () {
     return view('Ens.Enseignant');
 });
+
+Route::resource('enseignants', 'Ens\EnseignantController');
