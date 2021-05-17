@@ -1,5 +1,21 @@
 @extends('layouts.admin')
 @section('main')
+@if (session('storeEnseignant'))
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+        {{ session('storeEnseignant') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+@if (session('updateEnseignant'))
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+        {{ session('updateEnseignant') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
     <div class="page-bar">
             <div class="page-title-breadcrumb">
                      <div class=" pull-left">
@@ -43,6 +59,12 @@
 												<b>Department</b>
 												<div class="profile-desc-item pull-right">{{$enseignant->department }}</div>
 											</li>
+                                            
+                                            <li class="list-group-item">
+												<b>Adresse</b>
+												<div class="profile-desc-item pull-right">{{$enseignant->adresse}}</div>
+											</li>
+                                            
 										</ul>
 										<div class="row list-separated profile-stat">
 											<div class="col-md-4 col-sm-4 col-6">
@@ -61,11 +83,10 @@
 									</div>
 								</div>
                                 <!-- SIDEBAR BUTTONS -->
-										<div class="profile-userbuttons">
-                                       
-										<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-warning" title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">Edit</a>
-                                       <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger " title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}"> Delete
-										</a>
+										<div class="profile-userbuttons"><a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-warning" title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">Edit</a>
+                                        <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger " title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}"onclick="event.preventDefault(); document.querySelector('#delete-enseignant-form').submit()"> Delete
+                                        <i class="fas fa-user-slash"></i></a>
+                                         <form action="{{ route('enseignants.destroy', ['enseignant' => $enseignant->id]) }}" method="post" id="delete-enseignant-form">@csrf @method('DELETE')</form>
 										</div>
                                          <hr>
                                         <br>
@@ -120,17 +141,17 @@
 										</div>
 									</div> 
 									</div>
-                                     <div class="card" style="width: 38rem;">
+                                     <!--<div class="card" style="width: 38rem;">
 									<div class="card-head card-topline-aqua">
 										<header>Address</header>
 									</div>
 									<div class="card-body no-padding height-9">
 										<div class="row text-center m-t-10">
-											<div class="col-md-12">{{$enseignant->adresse}}
+											<div class="col-md-12">
 											</div>
 										</div>
 									</div>
 								</div>
 								</div>
-							</div>
+							</div>-->
                             @endsection
