@@ -18,8 +18,13 @@ class CreateEtudiantsTable extends Migration
             $table->string('nom',30);
             $table->string('prenom',30);
             $table->string('email',100)->unique();
-            $table->string('username',50);
-            $table->string('password',50);
+            $table->string('picture');
+            $table->enum('department', ['Informatique', 'Génie Mecanique', 'Génie Electrique', 'Génie de Procédés', 'Sciences économiques et Gestion']);
+            $table->string('phone');
+            $table->string('gender');
+            $table->date('admission_date');
+            //$table->string('username',50);
+            //$table->string('password',50);
             $table->timestamps();
         });
     }
