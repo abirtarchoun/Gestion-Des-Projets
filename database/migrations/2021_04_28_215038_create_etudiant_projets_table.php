@@ -18,8 +18,8 @@ class CreateEtudiantProjetsTable extends Migration
             $table->unsignedBigInteger('etudiant_id');
             $table->unsignedBigInteger('projet_id');
             $table->timestamps();
-            $table->foreign('etudiant_id')->references('id')->on('etudiants')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('etudiant_id')->references('id')->on('etudiants')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('cascade')->onUpdate('cascade');
 
         });
     }

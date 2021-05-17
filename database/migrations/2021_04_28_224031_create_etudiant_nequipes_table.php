@@ -18,8 +18,8 @@ class CreateEtudiantNequipesTable extends Migration
             $table->unsignedBigInteger('etudiant_id');
             $table->unsignedBigInteger('equipe_id');
             $table->timestamps();
-            $table->foreign('etudiant_id')->references('id')->on('etudiants')->nDelete('restrict')->onUpdate('restrict');
-            $table->foreign('equipe_id')->references('id')->on('equipes')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('etudiant_id')->references('id')->on('etudiants')->nDelete('cascade')->onUpdate('cascade');
+            $table->foreign('equipe_id')->references('id')->on('equipes')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
