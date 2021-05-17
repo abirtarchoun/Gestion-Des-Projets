@@ -1,7 +1,7 @@
-	@csrf
-										<div class="form-body">
-											<div class="form-group row">
-												<label for="nom" class="control-label col-md-3">First Name
+          @csrf
+						<div class="form-body">
+									<div class="form-group row">
+										<label for="nom" class="control-label col-md-3">First Name
 													<span class="required"> * </span>
 												</label>
 											<div class="col-md-5">
@@ -98,16 +98,14 @@
 													<span class="required"> * </span>
 												</label>
 												</label>
-												<div class="col-md-5"> 
-                                                <input  type="text" name="adresse" value="{{ $enseignant->adresse ?? old('adresse') }}" id="adresse" class="form-control @error('adresse') is-invalid @enderror" placeholder="Address goes here">
+												<div class="col-md-5"> <input  type="text" name="adresse" value="{{ $enseignant->adresse ?? old('adresse') }}" id="adresse" class="form-control @error('adresse') is-invalid @enderror" placeholder="Address goes here">
                                                  @error('adresse')<div class="text-danger">{{ $message }}</div>@enderror
 												</div>
                                                 </div>
 												</div>
 											</div>
                                             <div for = "picture" class="form-group row">
-												<label class="control-label col-md-3">Profile Picture
-												</label>
+												<label class="control-label col-md-3"> Profile Picture</label>
 												<div class="compose-editor">
                                             <input type="file" name="picture" id="picture" class="form-control" placeholder="Enseignant's photo goes here">
                                             @error('picture')<div class="text-danger">{{ $message }}</div> @enderror

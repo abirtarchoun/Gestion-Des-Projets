@@ -18,7 +18,7 @@ class CreateEquipesTable extends Migration
             $table->string('libelle',50);
             $table->unsignedBigInteger('projet_id');
             $table->timestamps();
-            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

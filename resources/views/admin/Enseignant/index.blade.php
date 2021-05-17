@@ -124,12 +124,11 @@
 																		<td>{{ $enseignant->joining_date }}</td>
 																		<td>
                                                                         <a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}" class="btn btn-warning btn-xs"title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">
-																		<i class="fa fa-pencil"></i></a>
-                                                                        <a href="#" class="btn btn-danger btn-xs" title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}" onclick="event.preventDefault(); document.querySelector('#delete-enseignant-form').submit()">
+																		<i class="fa fa-pencil"></i></a><a href="{{ route('enseignants.show', ['enseignant' => $enseignant->id]) }}" class="btn btn-info btn-xs" title="Show details about {{ $enseignant->nom.' '.$enseignant->prenom  }}">
+                                                                        <i class="fa fa-user-circle-o"></i> </a>
+																		<a href="#" class="btn btn-danger btn-xs" title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}" onclick="event.preventDefault(); document.querySelector('#delete-enseignant-form').submit()">
 																		<i class="fa fa-trash-o "></i></a>
                                                                          <form action="{{ route('enseignants.destroy', ['enseignant' => $enseignant->id]) }}" method="post" id="delete-enseignant-form">@csrf @method('DELETE')</form>
-                                                                        <a href="{{ route('enseignants.show', ['enseignant' => $enseignant->id]) }}" class="btn btn-info btn-xs" title="Show details about {{ $enseignant->nom.' '.$enseignant->prenom  }}">
-                                                                        <i class="fa fa-user-circle-o"></i> </a>
                                                                         </td>
 																	</tr>
                                                                      @endforeach
