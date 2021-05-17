@@ -1,5 +1,13 @@
 @extends('layouts.admin')
 @section('main')
+@if (session('deleteEnseignant'))
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+        {{ session('deletenseignant') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
     <div class="page-bar">
             <div class="page-title-breadcrumb">
                      <div class=" pull-left">
@@ -52,7 +60,7 @@
 														<div class="row">
 															<div class="col-md-6 col-sm-6 col-6">
 																<div class="btn-group">
-																	<a href="add_professor.html" id="addRow"
+																	<a href={{ route('enseignants.create') }} id="addRow"
 																		class="btn btn-info">
 																		Add New <i class="fa fa-plus"></i>
 																	</a>
@@ -115,10 +123,11 @@
 																		<td>{{$enseignant->email }}</td>
 																		<td>{{ $enseignant->joining_date }}</td>
 																		<td>
-                                                                        <a href="edit_professor.html" class="btn btn-warning btn-xs"title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">
+                                                                        <a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}" class="btn btn-warning btn-xs"title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">
 																		<i class="fa fa-pencil"></i></a>
-                                                                        <a href="#" class="btn btn-danger btn-xs" title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}">
+                                                                        <a href="#" class="btn btn-danger btn-xs" title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}" onclick="event.preventDefault(); document.querySelector('#delete-enseignant-form').submit()">
 																		<i class="fa fa-trash-o "></i></a>
+                                                                         <form action="{{ route('enseignants.destroy', ['enseignant' => $enseignant->id]) }}" method="post" id="delete-enseignant-form">@csrf @method('DELETE')</form>
                                                                         <a href="{{ route('enseignants.show', ['enseignant' => $enseignant->id]) }}" class="btn btn-info btn-xs" title="Show details about {{ $enseignant->nom.' '.$enseignant->prenom  }}">
                                                                         <i class="fa fa-user-circle-o"></i> </a>
                                                                         </td>

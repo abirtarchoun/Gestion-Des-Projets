@@ -21,6 +21,7 @@
 	<!-- data tables -->
 	<link href="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{{asset('assets/plugins/flatpicker/css/flatpickr.min.css')}}" />
 	<!-- Material Design Lite CSS -->
 	<link rel="stylesheet" href="{{asset('assets/plugins/material/material.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/material_style.css')}}">
@@ -30,6 +31,7 @@
 	<link href="{{asset('assets/css/theme/light/style.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/theme/light/theme-color.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('assets/css/pages/formlayout.css')}}" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
 	<link rel="shortcut icon" href="http://radixtouch.in/templates/assets/smart/source/assets/img/favicon.ico" />
 
@@ -878,8 +880,15 @@
 	<script src="{{asset('assets/js/pages/sparkline/sparkline-data.js')}}"defer></script>
 	<!-- data tables -->
 	<script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}" defer></script>
-	<script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}" defer></script>
 	<script src="{{asset('assets/js/pages/table/table_data.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}" defer></script><script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/flatpicker/js/flatpicker.min.js')}}" defer></script>
+	<!-- date  js-->
+	<script src="{{asset('assets/js/pages/date-time/date-time.init.js')}}" defer></script>
+	<!-- Validation  js-->
+	<script src="{{asset('assets/js/pages/validation/form-validation.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/jquery-validation/js/jquery.validate.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/jquery-validation/js/additional-methods.min.js')}}" defer></script>
 	<!-- end js include path -->
 </body>
 
