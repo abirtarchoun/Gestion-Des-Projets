@@ -19,11 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-  //Route::get('/admin', function () {
-    //return view('admin.dashborad');
-//});
-Route::get('/Ens', function () {
-    return view('Ens.Enseignant');
-});
+Route::get('/admin-dashboard', function () {
+    return view('admin.dashboard');
+})->middleware('auth', 'admin')->name('admin.dashboard');
 
-Route::resource('enseignants', 'Ens\EnseignantController');
+Route::resource('enseignants','Admin\EnseignantController');
+
+//Route::get('/Ens', function () {
+   // return view('Ens.Enseignant');
+//});
+
+//Route::resource('enseignants', 'Ens\EnseignantController');
