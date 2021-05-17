@@ -25,10 +25,10 @@ class CreateDépotsTable extends Migration
             $table->unsignedBigInteger('projet_id');
             $table->unsignedBigInteger('equipe_id');
             $table->timestamps();
-            $table->foreign('enseignant_id')->references('id')->on('enseignants')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('etudiant_id')->references('id')->on('etudiants')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('equipe_id')->references('id')->on('equipes')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('enseignant_id')->references('id')->on('enseignants')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('etudiant_id')->references('id')->on('etudiants')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('equipe_id')->references('id')->on('equipes')->onDelete('cascade')->onUpdate('cascade');
         
         });
     }

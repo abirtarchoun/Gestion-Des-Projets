@@ -19,7 +19,7 @@ class CreateProjetsTable extends Migration
             $table->string('sujet',50);
             $table->unsignedBigInteger('enseignant_id');
             $table->timestamps();
-            $table->foreign('enseignant_id')->references('id')->on('enseignants')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('enseignant_id')->references('id')->on('enseignants')->onDelete('cascade')->onUpdate('cascade');
            
         });
     }
