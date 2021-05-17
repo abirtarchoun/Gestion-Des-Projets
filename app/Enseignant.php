@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enseignant extends Model
 {
+    protected $guarded = [];
     public function projets()
     {
         return $this->hasMany('App\Projet');
