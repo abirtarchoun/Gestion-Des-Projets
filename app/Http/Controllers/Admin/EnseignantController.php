@@ -16,7 +16,7 @@ class EnseignantController extends Controller
     public function index()
     {
         
-        return view('admin.enseignant.index', ['enseignants' => Enseignant::paginate(12)]);
+        return view('admin.enseignant.index', ['enseignants' => Enseignant::paginate(100)]);
     }
 
     /**
@@ -107,7 +107,7 @@ class EnseignantController extends Controller
             'adresse' => 'required|max:255',
             'department' => 'required',
             'gender' => 'required',
-            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'picture' => 'required | mimes:jpeg,jpg,png | max:1000',
             'joining_date'=> 'required|date',
         ];
     }
