@@ -13,6 +13,7 @@
 	<title> Gestion des depots des projets </title>
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<!-- icons -->
 	<link href="{{asset('assets/fonts/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
@@ -32,9 +33,9 @@
 	<link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/theme/light/theme-color.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/pages/formlayout.css')}}" rel="stylesheet" type="text/css" />
+	
 	<!-- favicon -->
 	<link rel="shortcut icon" href="http://radixtouch.in/templates/assets/smart/source/assets/img/favicon.ico" />
-
 </head>
 <!-- end head -->
 
@@ -166,12 +167,12 @@
 										</a>
 									</li>
 									<li class="nav-item ">
-										<a href="dashboard2.html" class="nav-link ">
+										<a href="/admin-dashboard2" class="nav-link ">
 											<span class="title">Dashboard 2</span>
 										</a>
 									</li>
 									<li class="nav-item active">
-										<a href="dashboard3.html" class="nav-link ">
+										<a href="/admin-dashboard3" class="nav-link ">
 											<span class="title">Dashboard 3</span>
 											<span class="selected"></span>
 										</a>
@@ -866,6 +867,8 @@
 	<!-- bootstrap -->
 	<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"defer></script>
 	<script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" defer></script>
 	<!-- Common js-->
 	<script src="{{asset('assets/js/app.js')}}" defer></script>
 	<script src="{{asset('assets/js/layout.js')}}" defer></script>
@@ -876,24 +879,37 @@
 	<script src="{{asset('assets/plugins/chart-js/Chart.bundle.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/chart-js/utils.js')}}"defer></script>
 	<script src="{{asset('assets/js/pages/chart/chartjs/home-data3.js')}}"defer></script>
+	<script src="{{asset('assets/js/pages/chart/chartjs/home-data2.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/sparkline/jquery.sparkline.js')}}"defer></script>
 	<script src="{{asset('assets/js/pages/sparkline/sparkline-data.js')}}"defer></script>
 	<!-- data tables -->
 	<script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}" defer></script>
 	<script src="{{asset('assets/js/pages/table/table_data.js')}}" defer></script>
-	<script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}" defer></script><script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/flatpicker/js/flatpicker.min.js')}}" defer></script>
+	<!-- counterup -->
+	<script src="{{asset('assets/plugins/counterup/jquery.waypoints.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/counterup/jquery.counterup.min.js')}}" defer></script>
 	<!-- date  js-->
 	<script src="{{asset('assets/js/pages/date-time/date-time.init.js')}}" defer></script>
 	<!-- Validation  js-->
 	<script src="{{asset('assets/js/pages/validation/form-validation.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/jquery-validation/js/jquery.validate.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/jquery-validation/js/additional-methods.min.js')}}" defer></script>
+	<!--apex chart-->
+	<script src="{{asset ('assets/plugins/apexcharts/apexcharts.min.js')}}" defer></script>
+	<script src="{{asset('assets/js/pages/chart/chartjs/home-data.js')}}" defer ></script>
+	<!-- summernote -->
+	<script src="{{asset('assets/plugins/summernote/summernote.js')}}" defer></script>
+	<script src="{{asset('assets/js/pages/summernote/summernote-data.js')}}" defer></script>
+	<script src="{{ asset('js/temp.js') }}" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<!-- end js include path -->
-</body>
+ </body>
 
-
-<!-- Mirrored from radixtouch.in/templates/assets/smart/source/light/dashboard3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jun 2020 22:15:10 GMT -->
-
-<!-- Mirrored from zfda.go.tz/products/1/dashboard3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 May 2021 21:04:25 GMT -->
+<!--- -----scrool  button -------->         
+	<div class="scroll-to-top">
+	<i class="icon-arrow-up"></i>
+      </div>
+<!------ end scroll --------->
 </html>

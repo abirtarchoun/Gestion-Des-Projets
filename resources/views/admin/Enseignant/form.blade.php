@@ -98,7 +98,8 @@
 													<span class="required"> * </span>
 												</label>
 												</label>
-												<div class="col-md-5"> <input  type="text" name="adresse" value="{{ $enseignant->adresse ?? old('adresse') }}" id="adresse" class="form-control @error('adresse') is-invalid @enderror" placeholder="Address goes here">
+												<div class="col-md-5">
+                                                <input  type="text" name="adresse" value="{{ $enseignant->adresse ?? old('adresse') }}" id="adresse" class="form-control @error('adresse') is-invalid @enderror" placeholder="Address goes here">
                                                  @error('adresse')<div class="text-danger">{{ $message }}</div>@enderror
 												</div>
                                                 </div>

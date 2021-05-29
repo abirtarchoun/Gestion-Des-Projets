@@ -1,13 +1,6 @@
 @extends('layouts.admin')
 @section('main')
-@if (session('deleteEnseignant'))
-    <div class="alert alert-dismissible alert-success fade show" role="alert">
-        {{ session('deletenseignant') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-@endif
+
     <div class="page-bar">
             <div class="page-title-breadcrumb">
                      <div class=" pull-left">
@@ -23,6 +16,15 @@
 							</ol>
 						</div>
 					</div>
+		@if (session('deleteEnseignant'))
+    <div class="container">
+	        {{ session('deletenseignant') }}
+      <div class="alert alert-success alert-dismissible" id="myAlert">
+      <a href="#" class="close">&times;</a>
+       Suppression effectuer avec <strong>Success!</strong>.
+      </div>
+       </div>
+       @endif
 					<div class="row">
 						<div class="col-md-12">
 							<div class="tabbable-line">
@@ -119,8 +121,9 @@
 																		<td>{{ $enseignant->nom.' '.$enseignant->prenom  }}</td>
 																		<td class="left">{{ $enseignant->department}}</td>
 																		<td class="left">{{ $enseignant->gender }}</td>
-																		<td>{{ $enseignant->phone }}</td>
-																		<td>{{$enseignant->email }}</td>
+																		<td><a href="tel:21628097322">{{ $enseignant->phone }}</a></td>
+																		<td><a href="mailto:shuxer@gmail.com">
+																		 {{$enseignant->email }}</a></td>
 																		<td>{{ $enseignant->joining_date }}</td>
 																		<td>
                                                                         <a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}" class="btn btn-warning btn-xs"title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">
@@ -727,5 +730,6 @@
 	<div class="scroll-to-top">
 	<i class="icon-arrow-up"></i>
    </div>
+
 	           
 @endsection	

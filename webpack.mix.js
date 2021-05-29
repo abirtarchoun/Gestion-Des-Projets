@@ -16,7 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .styles( 'resources/css/templete.css','public/css/templete.css')
     
     .scripts(
-        ['resources/js/templete.js','resources/js/date.js', 
+        ['resources/js/templete.js','resources/js/date.js','resources/js/alerte.js',
     ],'public/js/temp.js')
     
         .copyDirectory('resources/img', 'public/img');
