@@ -40,6 +40,17 @@ Route::get('/admin-Apexchart', function () {
     return view('admin.Apexchart');
 })->middleware('auth', 'admin')->name('admin.Apexchart');
 
+Route::get('/admin-Amcharts', function () {
+    return view('admin.Amcharts');
+})->middleware('auth', 'admin')->name('admin.Amcharts');
+Route::get('/admin-MorrisChart', function () {
+    return view('admin.MorrisChart');
+})->middleware('auth', 'admin')->name('admin.MorrisChart');
+
+Route::get('/admin-ChartJs', function () {
+    return view('admin.ChartJs');
+})->middleware('auth', 'admin')->name('admin.ChartJs');
+
 Route::resource('enseignants','Admin\EnseignantController');
 
 //Route::get('/Ens', function () {
