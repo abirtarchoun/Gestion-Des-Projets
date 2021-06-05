@@ -32,9 +32,9 @@ class RedirectIfAuthenticated
            // return '/Etud-Etudiant';
        // }
            // return '/Eq-Equipe';
-        
-     
-        
+
+
+
 
         return $next($request);
     }
