@@ -39,8 +39,13 @@
 </head>
 <!-- end head -->
 
-{{------------------------------------------------ Standard Navigation ------------------------------------------------}}
-     	@include('layouts.navbar')
+{{------------------------------------------------Navigation ------------------------------------------------}}
+
+     	@include('layouts.navbarAdmin')
+		 
+{{------------------------------------------------END Navigation ------------------------------------------------}}
+
+
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
    
 				<!-- start mobile menu -->
@@ -195,25 +200,12 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="add_professor.html" class="nav-link "> <span class="title">Add
+										<a href="{{ route('enseignants.create') }}" class="nav-link "> <span class="title">Add
 												Professor</span>
 										</a>
 									</li>
-									<li class="nav-item">
-										<a href="add_professor_bootstrap.html" class="nav-link "> <span
-												class="title">Add Professor Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_professor.html" class="nav-link "> <span class="title">Edit
-												Professor</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link "> <span class="title">About
-												Professor</span>
-										</a>
-									</li>
+									
+							
 								</ul>
 							</li>
 							<li class="nav-item">
@@ -225,23 +217,8 @@
 												Students</span>
 										</a>
 									</li>
-									<li class="nav-item">
-										<a href="add_student.html" class="nav-link "> <span class="title">Add
-												Student</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_student_bootstrap.html" class="nav-link "> <span class="title">Add
-												Student Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_student.html" class="nav-link "> <span class="title">Edit
-												Student</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="student_profile.html" class="nav-link "> <span class="title">About
+											<li class="nav-item">
+										<a href="#" class="nav-link "> <span class="title">ADD
 												Student</span>
 										</a>
 									</li>
@@ -263,50 +240,9 @@
 												Course</span>
 										</a>
 									</li>
-									<li class="nav-item">
-										<a href="add_course_bootstrap.html" class="nav-link "> <span class="title">Add
-												Course Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_course.html" class="nav-link "> <span class="title">Edit
-												Course</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="course_details.html" class="nav-link "> <span class="title">About
-												Course</span>
-										</a>
-									</li>
 								</ul>
 							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">local_library</i>
-									<span class="title">Library</span> <span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="all_assets.html" class="nav-link "> <span class="title">All Library
-												assets</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_library.html" class="nav-link "> <span class="title">Add Library
-												Asset</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_library_bootstrap.html" class="nav-link "> <span class="title">Add
-												Asset Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_library.html" class="nav-link "> <span class="title">Edit
-												Asset</span>
-										</a>
-									</li>
-								</ul>
-							</li>
+						
 							<li class="nav-item">
 								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">business</i>
 									<span class="title">Departments</span> <span class="arrow"></span>
@@ -322,82 +258,9 @@
 												Department</span>
 										</a>
 									</li>
-									<li class="nav-item">
-										<a href="add_department_bootstrap.html" class="nav-link "> <span
-												class="title">Add Department Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_department.html" class="nav-link "> <span class="title">Edit
-												Department</span>
-										</a>
-									</li>
 								</ul>
 							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">face</i>
-									<span class="title">Staff</span> <span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="all_staffs.html" class="nav-link "> <span class="title">All
-												Staff</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_staff.html" class="nav-link "> <span class="title">Add Staff</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_staff_bootstrap.html" class="nav-link "> <span class="title">Add
-												Staff Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_staff.html" class="nav-link "> <span class="title">Edit
-												Staff</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="staff_profile.html" class="nav-link "> <span class="title">Staff
-												Profile</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle"> <i
-										class="material-icons">airline_seat_individual_suite</i>
-									<span class="title">Holiday</span> <span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="all_holidays.html" class="nav-link "> <span class="title">All
-												Holiday</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_holiday.html" class="nav-link "> <span class="title">Add
-												Holiday</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_holiday_bootstrap.html" class="nav-link "> <span class="title">Add
-												Holiday Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_holiday.html" class="nav-link "> <span class="title">Edit
-												Holiday</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="holiday_calendar.html" class="nav-link "> <span class="title">Holiday
-												Calendar</span>
-										</a>
-									</li>
-								</ul>
-							</li>
+							
 							<li class="nav-item">
 								<a href="#" class="nav-link nav-toggle">
 									<i class="material-icons">email</i>
@@ -423,215 +286,8 @@
 									</li>
 								</ul>
 							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">monetization_on</i>
-									<span class="title">Fees</span> <span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="fees_collection.html" class="nav-link "> <span class="title">Fees
-												Collection</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_fees.html" class="nav-link "> <span class="title">Add Fees </span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_fees_bootstrap.html" class="nav-link "> <span class="title">Add
-												Fees Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="fees_receipt.html" class="nav-link "> <span class="title">Fee
-												Receipt</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a href="widget.html" class="nav-link nav-toggle"> <i class="material-icons">widgets</i>
-									<span class="title">Widget</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle">
-									<i class="material-icons">dvr</i>
-									<span class="title">UI Elements</span>
-									<span class="label label-rouded label-menu label-warning">new</span>
-									<span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="ui_buttons.html" class="nav-link ">
-											<span class="title">Buttons</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_sweet_alert.html" class="nav-link ">
-											<span class="title">Sweet Alert</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_tabs_accordions_navs.html" class="nav-link ">
-											<span class="title">Tabs &amp; Accordions</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_typography.html" class="nav-link ">
-											<span class="title">Typography</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="notification.html" class="nav-link ">
-											<span class="title">Notification</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_icons.html" class="nav-link ">
-											<span class="title">Icons</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_panels.html" class="nav-link ">
-											<span class="title">Panels</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_grid.html" class="nav-link ">
-											<span class="title">Grids</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="calendar.html" class="nav-link ">
-											<span class="title">Calender</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_tree.html" class="nav-link ">
-											<span class="title">Tree View</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="ui_carousel.html" class="nav-link ">
-											<span class="title">Carousel</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle">
-									<i class="material-icons">store</i>
-									<span class="title">Material Elements</span>
-									<span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="material_button.html" class="nav-link ">
-											<span class="title">Buttons</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_tab.html" class="nav-link ">
-											<span class="title">Tabs</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_chips.html" class="nav-link ">
-											<span class="title">Chips</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_grid.html" class="nav-link ">
-											<span class="title">Grid</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_icons.html" class="nav-link ">
-											<span class="title">Icon</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_form.html" class="nav-link ">
-											<span class="title">Form</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_datepicker.html" class="nav-link ">
-											<span class="title">DatePicker</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_select.html" class="nav-link ">
-											<span class="title">Select Item</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_loading.html" class="nav-link ">
-											<span class="title">Loading</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_menu.html" class="nav-link ">
-											<span class="title">Menu</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_slider.html" class="nav-link ">
-											<span class="title">Slider</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_tables.html" class="nav-link ">
-											<span class="title">Tables</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_toggle.html" class="nav-link ">
-											<span class="title">Toggle</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="material_badges.html" class="nav-link ">
-											<span class="title">Badges</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a href="javascript:;" class="nav-link nav-toggle">
-									<i class="material-icons">subtitles</i>
-									<span class="title">Forms </span>
-									<span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="layouts_form.html" class="nav-link ">
-											<span class="title">Form Layout</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="advance_form.html" class="nav-link ">
-											<span class="title">Advance Component</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="wizard.html" class="nav-link ">
-											<span class="title">Form Wizard</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="validation_form.html" class="nav-link ">
-											<span class="title">Form Validation</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="editable_form.html" class="nav-link ">
-											<span class="title">Editor</span>
-										</a>
-									</li>
-								</ul>
-							</li>
+						
+							
 							<li class="nav-item">
 								<a href="javascript:;" class="nav-link nav-toggle">
 									<i class="material-icons">list</i>
@@ -679,7 +335,7 @@
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="charts_apexchart.html" class="nav-link ">
+										<a href="/admin-Apexchart" class="nav-link ">
 											<span class="title">Apex chart</span>
 										</a>
 									</li>
@@ -718,7 +374,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="vector_maps.html" class="nav-link ">
+										<a href="/admin-vectorMaps" class="nav-link ">
 											<span class="title">Vector Maps</span>
 										</a>
 									</li>
@@ -904,6 +560,20 @@
 	<script src="{{ asset('js/temp.js') }}" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- vector map -->
+	<script src="{{asset('assets/plugins/jqvmap/jquery.vmap.js')}} " defer ></script>
+	<script src="{{asset('assets/plugins/jqvmap/maps/jquery.vmap.russia.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/jqvmap/maps/jquery.vmap.world.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/jqvmap/maps/jquery.vmap.europe.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/jqvmap/maps/jquery.vmap.germany.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/jqvmap/maps/jquery.vmap.usa.js')}} " defer></script>
+	<script src="{{asset('assets/plugins/jqvmap/data/jquery.vmap.sampledata.js')}}" defer ></script>
+	<script src="{{asset('assets/js/pages/map/vector-data.js')}}" defer ></script>
+	<!--apex chart-->
+	<script src="{{asset('assets/plugins/apexcharts/apexcharts.min.js')}}" defer></script>
+	<!-- Page Specific JS File -->
+	<script src="{{asset('assets/js/pages/chart/apex/apexcharts.data.js')}}" defer></script>
+	
 	<!-- end js include path -->
  </body>
 

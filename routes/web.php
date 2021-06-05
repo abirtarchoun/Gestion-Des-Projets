@@ -31,6 +31,15 @@ Route::get('/admin-dashboard3', function () {
     return view('admin.dashboard3');
 })->middleware('auth', 'admin')->name('admin.dashboard3');
 
+
+Route::get('/admin-vectorMaps', function () {
+    return view('admin.vectorMaps');
+})->middleware('auth', 'admin')->name('admin.vectorMaps');
+
+Route::get('/admin-Apexchart', function () {
+    return view('admin.Apexchart');
+})->middleware('auth', 'admin')->name('admin.Apexchart');
+
 Route::resource('enseignants','Admin\EnseignantController');
 
 //Route::get('/Ens', function () {
