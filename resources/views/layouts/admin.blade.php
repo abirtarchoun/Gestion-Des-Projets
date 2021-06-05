@@ -340,22 +340,17 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="charts_amchart.html" class="nav-link ">
+										<a href="/admin-Amcharts" class="nav-link ">
 											<span class="title">amChart</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="charts_echarts.html" class="nav-link ">
-											<span class="title">eCharts</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="charts_morris.html" class="nav-link ">
+										<a href="/admin-MorrisChart" class="nav-link ">
 											<span class="title">Morris Charts</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="charts_chartjs.html" class="nav-link ">
+										<a href="/admin-ChartJs" class="nav-link ">
 											<span class="title">Chartjs</span>
 										</a>
 									</li>
@@ -573,7 +568,19 @@
 	<script src="{{asset('assets/plugins/apexcharts/apexcharts.min.js')}}" defer></script>
 	<!-- Page Specific JS File -->
 	<script src="{{asset('assets/js/pages/chart/apex/apexcharts.data.js')}}" defer></script>
+		<!--amchart chart-->
+	<script src="{{asset('assets/plugins/amcharts4/core.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/amcharts4/charts.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/amcharts4/animated.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/amcharts4/worldLow.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/amcharts4/maps.js')}}" defer></script>
 	
+	<!-- Page Specific JS File -->
+	<script src="{{asset('assets/js/pages/chart/amchart/amchart-data.js')}}" defer></script>
+	<!--  js-->
+	<script src="{{asset('assets/plugins/morris/morris.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/morris/raphael-min.js')}}"defer></script>
+	<script src="{{asset('assets/js/pages/chart/morris/morris_chart_data.js')}}"defer></script>
 	<!-- end js include path -->
  </body>
 
