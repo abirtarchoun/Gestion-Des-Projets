@@ -613,13 +613,3 @@ var Layout = function () {
     	 if (activeItemOffsetTop > 150) $el.slimscroll({ scrollTo: activeItemOffsetTop + 'px' });*/
     	 
     });
-    $(document).ready(function(){
-        $(".close").click(function(){
-          $("#myAlert").alert("close");
-        });
-        $("#myAlert").on('close.bs.alert', function(){
-          alert('The alert message is about to be closed.');
-        });
-      });
-      
-   
