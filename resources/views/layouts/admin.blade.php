@@ -18,7 +18,7 @@
 	<link href="{{asset('assets/fonts/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/fonts/material-design-icons/material-icon.css')}}" rel="stylesheet" type="text/css" />
-	<!--bootstrap -->
+
 	<!-- data tables -->
 	<link href="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -26,6 +26,7 @@
 	<!-- Material Design Lite CSS -->
 	<link rel="stylesheet" href="{{asset('assets/plugins/material/material.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/material_style.css')}}">
+	<link href="{{asset('assets/plugins/sweet-alert/sweetalert2.min.css')}}" rel="stylesheet">
 	<!-- Theme Styles -->
 	<link href="{{asset('assets/css/theme/light/theme_style.css')}}" rel="stylesheet" id="rt_style_components" type="text/css" />
 	<link href="{{asset('assets/css/plugins.min.css')}}" rel="stylesheet" type="text/css" />
@@ -33,7 +34,13 @@
 	<link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/theme/light/theme-color.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/pages/formlayout.css')}}" rel="stylesheet" type="text/css" />
-	
+
+     <!-- Jquery Toast css -->
+	<link rel="stylesheet" href="{{asset('assets/plugins/jquery-toast/jquery.toast.min.css')}}">
+		
+	<!---------------------------------------------------------------------------------------------->
+		<!-- full calendar -->
+	<link href="{{asset('assets/plugins/fullcalendar/fullcalendar.css')}}" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
 	<link rel="shortcut icon" href="http://radixtouch.in/templates/assets/smart/source/assets/img/favicon.ico" />
 </head>
@@ -45,15 +52,9 @@
 		 
 {{------------------------------------------------END Navigation ------------------------------------------------}}
 
-
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
    
-				<!-- start mobile menu -->
-				<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span></span>
-				</a>		
-		<!-- start color quick setting--> 
+	<!-- start color quick setting -->
 		<div class="settingSidebar">
 			<a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
 			</a>
@@ -132,6 +133,10 @@
 			</div>
 		</div>
 		<!-- end color quick setting -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span></span>
+				</a>
 		<!-- start page container -->
 		<div class="page-container">
 			<!-- start sidebar menu -->
@@ -159,7 +164,7 @@
 								</div>
 							</li>
 							<li class="nav-item start active open">
-								<a href="#" class="nav-link nav-toggle">
+								<a href=" javascript:; " class="nav-link nav-toggle">
 									<i class="material-icons">dashboard</i>
 									<span class="title">Dashboard</span>
 									<span class="selected"></span>
@@ -171,21 +176,21 @@
 											<span class="title">Dashboard 1</span>
 										</a>
 									</li>
-									<li class="nav-item ">
+									<li class="nav-item active">
 										<a href="/admin-dashboard2" class="nav-link ">
 											<span class="title">Dashboard 2</span>
+											<span class="selected"></span>
 										</a>
 									</li>
-									<li class="nav-item active">
+									<li class="nav-item">
 										<a href="/admin-dashboard3" class="nav-link ">
 											<span class="title">Dashboard 3</span>
-											<span class="selected"></span>
 										</a>
 									</li>
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a href="event.html" class="nav-link nav-toggle"> <i class="material-icons">event</i>
+								<a href="/admin-events" class="nav-link nav-toggle"> <i class="material-icons">event</i>
 									<span class="title">Event Management</span>
 								</a>
 							</li>
@@ -200,12 +205,10 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="{{ route('enseignants.create') }}" class="nav-link "> <span class="title">Add
+										<a href="{{route('enseignants.create')}}" class="nav-link "> <span class="title">Add
 												Professor</span>
 										</a>
 									</li>
-									
-							
 								</ul>
 							</li>
 							<li class="nav-item">
@@ -217,8 +220,8 @@
 												Students</span>
 										</a>
 									</li>
-											<li class="nav-item">
-										<a href="#" class="nav-link "> <span class="title">ADD
+									<li class="nav-item">
+										<a href="add_student.html" class="nav-link "> <span class="title">Add
 												Student</span>
 										</a>
 									</li>
@@ -240,9 +243,14 @@
 												Course</span>
 										</a>
 									</li>
+									<li class="nav-item">
+										<a href="add_course_bootstrap.html" class="nav-link "> <span class="title">Add
+												Course Bootstrap</span>
+										</a>
+									</li>
+									
 								</ul>
 							</li>
-						
 							<li class="nav-item">
 								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">business</i>
 									<span class="title">Departments</span> <span class="arrow"></span>
@@ -260,7 +268,46 @@
 									</li>
 								</ul>
 							</li>
-							
+							<li class="nav-item">
+								<a href="widget.html" class="nav-link nav-toggle"> <i class="material-icons">widgets</i>
+									<span class="title">Widget</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link nav-toggle">
+									<i class="material-icons">dvr</i>
+									<span class="title">UI Elements</span>
+									<span class="label label-rouded label-menu label-warning">new</span>
+									<span class="arrow"></span>
+								</a>
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="/admin-boutton" class="nav-link ">
+											<span class="title">Buttons</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="/admin-alerte" class="nav-link ">
+											<span class="title">Sweet Alert</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="/admin-notification" class="nav-link ">
+											<span class="title">Notification</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="/admin-icone" class="nav-link ">
+											<span class="title">Icons</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="/admin-panel" class="nav-link ">
+											<span class="title">Panels</span>
+										</a>
+									</li>
+								</ul>
+							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link nav-toggle">
 									<i class="material-icons">email</i>
@@ -282,47 +329,6 @@
 									<li class="nav-item">
 										<a href="email_compose.html" class="nav-link ">
 											<span class="title">Compose Mail</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						
-							
-							<li class="nav-item">
-								<a href="javascript:;" class="nav-link nav-toggle">
-									<i class="material-icons">list</i>
-									<span class="title">Data Tables</span>
-									<span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="basic_table.html" class="nav-link ">
-											<span class="title">Basic Tables</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="advanced_table.html" class="nav-link ">
-											<span class="title">Advance Tables</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="export_table.html" class="nav-link ">
-											<span class="title">Export Tables</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="child_row_table.html" class="nav-link ">
-											<span class="title">Child Row Tables</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="group_table.html" class="nav-link ">
-											<span class="title">Grouping</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="tableData.html" class="nav-link ">
-											<span class="title">Tables With Sourced Data</span>
 										</a>
 									</li>
 								</ul>
@@ -381,126 +387,17 @@
 									<span class="title">Extra pages</span>
 									<span class="arrow"></span>
 								</a>
-								<ul class="sub-menu">
-									<li class="nav-item  ">
-										<a href="login.html" class="nav-link "> <span class="title">Login</span>
-										</a>
-									</li>
-									<li class="nav-item  ">
-										<a href="sign_up.html" class="nav-link "> <span class="title">Sign Up</span>
-										</a>
-									</li>
-									<li class="nav-item  ">
-										<a href="forgot_password.html" class="nav-link "> <span class="title">Forgot
-												Password</span>
-										</a>
-									</li>
-									<li class="nav-item"><a href="user_profile.html" class="nav-link "><span
-												class="title">Profile</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="contact.html" class="nav-link "> <span class="title">Contact Us</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="lock_screen.html" class="nav-link "> <span class="title">Lock
-												Screen</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="page-404.html" class="nav-link "> <span class="title">404 Page</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="page-500.html" class="nav-link "> <span class="title">500 Page</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="blank_page.html" class="nav-link "> <span class="title">Blank
-												Page</span>
-										</a>
-									</li>
 								</ul>
-							</li>
-							<li class="nav-item">
-								<a href="javascript:;" class="nav-link nav-toggle">
-									<i class="material-icons">slideshow</i>
-									<span class="title">Multi Level Menu</span>
-									<span class="arrow "></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="javascript:;" class="nav-link nav-toggle">
-											<i class="fa fa-university"></i> Item 1
-											<span class="arrow"></span>
-										</a>
-										<ul class="sub-menu">
-											<li class="nav-item">
-												<a href="javascript:;" class="nav-link nav-toggle">
-													<i class="fa fa-bell-o"></i> Arrow Toggle
-													<span class="arrow "></span>
-												</a>
-												<ul class="sub-menu">
-													<li class="nav-item">
-														<a href="javascript:;" class="nav-link">
-															<i class="fa fa-calculator"></i> Sample Link 1</a>
-													</li>
-													<li class="nav-item">
-														<a href="#" class="nav-link">
-															<i class="fa fa-clone"></i> Sample Link 2</a>
-													</li>
-													<li class="nav-item">
-														<a href="#" class="nav-link">
-															<i class="fa fa-cogs"></i> Sample Link 3</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-item">
-												<a href="#" class="nav-link">
-													<i class="fa fa-file-pdf-o"></i> Sample Link 1</a>
-											</li>
-											<li class="nav-item">
-												<a href="#" class="nav-link">
-													<i class="fa fa-rss"></i> Sample Link 2</a>
-											</li>
-											<li class="nav-item">
-												<a href="#" class="nav-link">
-													<i class="fa fa-hdd-o"></i> Sample Link 3</a>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-item">
-										<a href="javascript:;" class="nav-link nav-toggle">
-											<i class="fa fa-gavel"></i> Arrow Toggle
-											<span class="arrow"></span>
-										</a>
-										<ul class="sub-menu">
-											<li class="nav-item">
-												<a href="#" class="nav-link">
-													<i class="fa fa-paper-plane"></i> Sample Link 1</a>
-											</li>
-											<li class="nav-item">
-												<a href="#" class="nav-link">
-													<i class="fa fa-power-off"></i> Sample Link 1</a>
-											</li>
-											<li class="nav-item">
-												<a href="#" class="nav-link">
-													<i class="fa fa-recycle"></i> Sample Link 1
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="fa fa-volume-up"></i> Item 3 </a>
-									</li>
+							     </li>
+									
 								</ul>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<!-- end sidebar menu -->
+			
 			<!-- end sidebar menu -->
 			 <div role="main" class="page-content-wrapper">
 			<div class="page-content">
@@ -511,7 +408,7 @@
 	</div>
 	<!-- start js include path -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0/jquery.blockUI.min.js"></script>
-	<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}" defer></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="{{asset('assets/plugins/popper/popper.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/jquery-blockui/jquery.blockui.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/jquery-slimscroll/jquery.slimscroll.js')}}"defer></script>
@@ -519,7 +416,6 @@
 	<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"defer></script>
 	<script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}" defer></script>
-	<script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" defer></script>
 	<!-- Common js-->
 	<script src="{{asset('assets/js/app.js')}}" defer></script>
 	<script src="{{asset('assets/js/layout.js')}}" defer></script>
@@ -570,17 +466,29 @@
 	<script src="{{asset('assets/js/pages/chart/apex/apexcharts.data.js')}}" defer></script>
 		<!--amchart chart-->
 	<script src="{{asset('assets/plugins/amcharts4/core.js')}}" defer></script>
-	<script src="{{asset('assets/plugins/amcharts4/charts.js')}}" defer ></script>
+	<script src="{{asset('assets/plugins/amcharts4/charts.js')}}" defer  ></script>
 	<script src="{{asset('assets/plugins/amcharts4/animated.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/amcharts4/worldLow.js')}}" defer ></script>
 	<script src="{{asset('assets/plugins/amcharts4/maps.js')}}" defer></script>
 	
 	<!-- Page Specific JS File -->
 	<script src="{{asset('assets/js/pages/chart/amchart/amchart-data.js')}}" defer></script>
-	<!--  js-->
+	<!--  morris chart js-->
 	<script src="{{asset('assets/plugins/morris/morris.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/morris/raphael-min.js')}}"defer></script>
 	<script src="{{asset('assets/js/pages/chart/morris/morris_chart_data.js')}}"defer></script>
+	<!----------- calendrier ----------------------------->
+    <script src="{{asset('assets/plugins/moment/moment.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/fullcalendar/fullcalendar.min.js')}}" defer></script>
+	<script src="{{asset('assets/js/pages/calendar/calendar.min.js')}}" defer></script>
+	<!-----alerte ------------->
+		<script src="{{asset('assets/plugins/sweet-alert/sweetalert2.all.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/sweet-alert/sweetalert2.min.js')}}" defer></script>
+	<script src="{{asset('assets/js/pages/sweet-alert/sweet-alert-data.js')}}" defer></script>
+	<!-- toats jquery ---->
+	
+	<script src="{{asset('assets/plugins/jquery-toast/jquery.toast.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/jquery-toast/toast.js')}}" defer></script>
 	<!-- end js include path -->
  </body>
 

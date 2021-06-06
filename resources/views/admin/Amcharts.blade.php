@@ -3,7 +3,8 @@
 	@section('main')
 			<div class="page-bar">
 			<div class="page-title-breadcrumb">
-			<div class=" pull-left"><div class="page-title">amChart</div>
+			<div class=" pull-left">
+            <div class="page-title">amChart</div>
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
