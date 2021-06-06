@@ -1,22 +1,8 @@
 @extends('layouts.userapp')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <!--place session variables /alerts   -->
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <main>
-                        <div class="main-section">
-                            <div class="container">
-                                <div class="main-section-data">
+                         <div class="main-section-data">
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 pd-left-none no-pd">
                                             <div class="main-left-sidebar no-margin">
@@ -422,13 +408,6 @@
                                         </div>
                                     </div>
                                 </div><!-- main-section-data end-->
-                            </div>
-                        </div>
-                    </main>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection

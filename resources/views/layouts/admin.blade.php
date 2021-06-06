@@ -33,7 +33,7 @@
 	<link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/theme/light/theme-color.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/css/pages/formlayout.css')}}" rel="stylesheet" type="text/css" />
-	
+
 	<!-- favicon -->
 	<link rel="shortcut icon" href="http://radixtouch.in/templates/assets/smart/source/assets/img/favicon.ico" />
 </head>
@@ -42,13 +42,13 @@
 {{------------------------------------------------ Standard Navigation ------------------------------------------------}}
      	@include('layouts.navbar')
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
-   
+
 				<!-- start mobile menu -->
 				<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
 					data-target=".navbar-collapse">
 					<span></span>
-				</a>		
-		<!-- start color quick setting--> 
+				</a>
+		<!-- start color quick setting-->
 		<div class="settingSidebar">
 			<a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
 			</a>
@@ -221,27 +221,23 @@
 									<span class="title">Students</span><span class="arrow"></span></a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="all_students.html" class="nav-link "> <span class="title">All
+										<a href="/etudiants" class="nav-link "> <span class="title">All
 												Students</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="add_student.html" class="nav-link "> <span class="title">Add
+										<a href="/ajout_etud.html" class="nav-link "> <span class="title">Add
+												Student</span>
+										</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="/edit_etud.html" class="nav-link "> <span class="title">Edit
 												Student</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="add_student_bootstrap.html" class="nav-link "> <span class="title">Add
-												Student Bootstrap</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_student.html" class="nav-link "> <span class="title">Edit
-												Student</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="student_profile.html" class="nav-link "> <span class="title">About
+										<a href="/profile_etud.html" class="nav-link "> <span class="title">About
 												Student</span>
 										</a>
 									</li>
@@ -854,9 +850,9 @@
 			 <div role="main" class="page-content-wrapper">
 			<div class="page-content">
              @yield('main')
-            </div> 
+            </div>
 			</div>
-		
+
 	</div>
 	<!-- start js include path -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0/jquery.blockUI.min.js"></script>
@@ -907,7 +903,7 @@
 	<!-- end js include path -->
  </body>
 
-<!--- -----scrool  button -------->         
+<!--- -----scrool  button -------->
 	<div class="scroll-to-top">
 	<i class="icon-arrow-up"></i>
       </div>

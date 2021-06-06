@@ -10,7 +10,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->  
+  <!-- Vendor CSS Files -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/templete.css') }}" rel="stylesheet">
   <link href="{{ asset('icofont/icofont.min.css')}}" rel="stylesheet">
@@ -21,7 +21,7 @@
   <link href="{{ asset('aos/aos.css')}}" rel="stylesheet">
   <!-- ======= Header ======= -->
 
-   
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
@@ -406,11 +406,10 @@
   <script src="{{ asset('waypoints/jquery.waypoints.min.js')}}" defer></script>
   <script src="{{ asset('counterup/counterup.min.js')}}" defer></script>
   <script src="{{ asset('owl.carousel/owl.carousel.min.js')}}" defer></script>
-  
+
   <script src="{{ asset('aos/aos.js') }}" defer></script>
 
   <!-- Template Main JS File -->
    <script src="{{ asset('js/temp.js') }}" defer></script>
-   @endsection    
-                
-        
+   @endsection
+

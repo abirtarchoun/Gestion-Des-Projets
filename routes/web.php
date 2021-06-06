@@ -33,6 +33,8 @@ Route::get('/admin-dashboard3', function () {
 
 Route::resource('enseignants','Admin\EnseignantController');
 
+
+Route::resource('etudiants','Admin\EtudiantController');
 //Route::get('/Ens', function () {
    // return view('Ens.Enseignant');
 //});
