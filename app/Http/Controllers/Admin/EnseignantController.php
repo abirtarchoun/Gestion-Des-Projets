@@ -107,7 +107,7 @@ class EnseignantController extends Controller
             'adresse' => 'required|max:255',
             'department' => 'required',
             'gender' => 'required',
-            'picture' => 'required | mimes:jpeg,jpg,png | max:1000',
+            'picture' => 'required| max:1000',
             'joining_date'=> 'required|date',
         ];
     }

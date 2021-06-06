@@ -84,6 +84,29 @@ Route::get('/admin-boutton', function () {
     return view('admin.boutton');
 })->middleware('auth', 'admin')->name('admin.boutton');
 
+
+//*******************************  Panel  view********************************************//
+Route::get('/admin-panel', function () {
+    return view('admin.panel');
+})->middleware('auth', 'admin')->name('admin.panel');
+
+
+//*******************************  grid  view********************************************//
+Route::get('/admin-gride', function () {
+    return view('admin.gride');
+})->middleware('auth', 'admin')->name('admin.gride');
+
+
+//*******************************  Carousel sildeshow view********************************************//
+Route::get('/admin-carousel', function () {
+    return view('admin.carousel');
+})->middleware('auth', 'admin')->name('admin.carousel');
+//******************************* icone view********************************************//
+Route::get('/admin-icone', function () {
+    return view('admin.icone');
+})->middleware('auth', 'admin')->name('admin.icone');
+
+
 //*******************************   Enseignant view ********************************************//
 
 Route::resource('enseignants','Admin\EnseignantController');
