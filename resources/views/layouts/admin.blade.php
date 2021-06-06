@@ -5,6 +5,7 @@
 
 <!-- Mirrored from radixtouch.in/templates/assets/smart/source/light/dashboard3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jun 2020 22:15:09 GMT -->
 <head>
+
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -16,6 +17,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<!-- icons -->
 	<link href="{{asset('assets/fonts/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/fonts/material-design-icons/material-icon.css')}}" rel="stylesheet" type="text/css" />
 
@@ -37,12 +39,23 @@
 
      <!-- Jquery Toast css -->
 	<link rel="stylesheet" href="{{asset('assets/plugins/jquery-toast/jquery.toast.min.css')}}">
-		
 	<!---------------------------------------------------------------------------------------------->
-		<!-- full calendar -->
-	<link href="{{asset('assets/plugins/fullcalendar/fullcalendar.css')}}" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
 	<link rel="shortcut icon" href="http://radixtouch.in/templates/assets/smart/source/assets/img/favicon.ico" />
+		<!-- Owl Carousel Assets -->
+	<link href="{{asset('assets/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
+	<link href="{{asset('assets/plugins/owl-carousel/owl.theme.css')}}" rel="stylesheet">
+	<style>
+		#owl-demo .item img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		#owl-demo2 .item {
+			margin: 3px;
+		}
+	</style>
 </head>
 <!-- end head -->
 
@@ -306,6 +319,12 @@
 											<span class="title">Panels</span>
 										</a>
 									</li>
+										<li class="nav-item active">
+										<a href="/admin-carousel" class="nav-link ">
+											<span class="title">Carousel</span>
+											<span class="selected"></span>
+										</a>
+									</li>
 								</ul>
 							</li>
 							<li class="nav-item">
@@ -486,9 +505,11 @@
 	<script src="{{asset('assets/plugins/sweet-alert/sweetalert2.min.js')}}" defer></script>
 	<script src="{{asset('assets/js/pages/sweet-alert/sweet-alert-data.js')}}" defer></script>
 	<!-- toats jquery ---->
-	
 	<script src="{{asset('assets/plugins/jquery-toast/jquery.toast.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/jquery-toast/toast.js')}}" defer></script>
+		<!-------- casousel js------>
+	<script src="{{asset('assets/js/pages/owl-carousel/owl_data.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/owl-carousel/owl.carousel.js')}}" defer></script>
 	<!-- end js include path -->
  </body>
 
