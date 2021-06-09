@@ -229,12 +229,12 @@
 									<span class="title">Students</span><span class="arrow"></span></a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="all_students.html" class="nav-link "> <span class="title">All
+										<a href="{{route('etudiants.index')}}" class="nav-link "> <span class="title">All
 												Students</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="add_student.html" class="nav-link "> <span class="title">Add
+										<a href="{{route('etudiants.create')}}"  class="nav-link "> <span class="title">Add
 												Student</span>
 										</a>
 									</li>

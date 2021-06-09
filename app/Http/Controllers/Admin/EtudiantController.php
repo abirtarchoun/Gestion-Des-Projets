@@ -15,7 +15,8 @@ class EtudiantController extends Controller
      */
     public function index()
     {
-        //
+        
+        return view('admin.etudiant.index', ['etudiants' => Etudiant::paginate(100)]);
     }
 
     /**
@@ -25,7 +26,8 @@ class EtudiantController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('admin.etudiant.create');
     }
 
     /**
@@ -36,7 +38,13 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+        // mass assignment
+      $validatedData['picture'] = $request->picture->store('uploads','public');
+       
+      $etudiant = Etudiant::create($validatedData);
+
+      return redirect()->route('etudiants.show', $etudiant)->with('storeEtudiant', "Etudiant has been added successfuly");
     }
 
     /**
@@ -47,7 +55,8 @@ class EtudiantController extends Controller
      */
     public function show(Etudiant $etudiant)
     {
-        //
+        
+        return view('admin.etudiant.show', ['etudiant' => $etudiant]);
     }
 
     /**
@@ -58,7 +67,8 @@ class EtudiantController extends Controller
      */
     public function edit(Etudiant $etudiant)
     {
-        //
+        
+        return view('admin.etudiant.edit', ['etudiant' => $etudiant]);
     }
 
     /**
@@ -69,8 +79,11 @@ class EtudiantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Etudiant $etudiant)
-    {
-        //
+
+    {   $validatedData = $request->validate($this->validationRules());
+        $etudiant->update($validatedData);
+
+        return redirect()->route('etudiants.show', $etudiant)->with('updateEtudiant', "Etudiant has been updated successfuly");
     }
 
     /**
@@ -81,6 +94,27 @@ class EtudiantController extends Controller
      */
     public function destroy(Etudiant $etudiant)
     {
-        //
+        
+        
+        $etudiant->delete();
+        return redirect()->route('etudiants.index')->with('deleteEtudiant', 'Etudiant has been deleted!');
+
+    
+}
+
+
+
+private function validationRules()
+    {
+        return [
+            'nom' => 'required|string',
+            'prenom' => 'required|string',
+            'phone' => 'required',
+            'email' => 'required|email',
+            'department' => 'required|string',
+            'gender' => 'required|string',
+            'picture' => 'required|file|image',
+            'admission_date'=> 'required|date',
+        ];
     }
 }

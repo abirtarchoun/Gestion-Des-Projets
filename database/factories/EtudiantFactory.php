@@ -11,7 +11,8 @@ $factory->define(Etudiant::class, function (Faker $faker) {
         'prenom'=>$faker->lastName,
         'email' =>$faker->unique()->email,
         'gender' =>$faker->randomElements(['male', 'female'])[0],
-        'department' =>$faker->randomElement(['Informatique', 'Génie Mecanique', 'Génie Electrique', 'Génie de Procédés', 'Sciences économiques et Gestion']),
+        'picture' => 'http://lorempixel.com/640/480/people/'.$faker->randomDigitNotNull,
+        'department' =>$faker->randomElement(['Informatique', 'GénieMecanique', 'GénieElectrique', 'GéniedeProcédés']),
         'picture' => $faker->imageUrl,
         'phone' => $faker->e164PhoneNumber,
         'admission_date' => $faker->date
