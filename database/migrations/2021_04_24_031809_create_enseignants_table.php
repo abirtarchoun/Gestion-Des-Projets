@@ -21,7 +21,7 @@ class CreateEnseignantsTable extends Migration
             $table->string('email',100)->unique();
             $table->string('picture');
             $table->string('gender');
-            $table->enum('department', ['Informatique', 'Génie Mecanique', 'Génie Electrique', 'Génie de Procédés', 'Sciences économiques et Gestion']);
+            $table->enum('department', ['Informatique', 'GénieMecanique', 'GénieElectrique', 'GéniedeProcédes']);
             $table->string('phone');
             $table->integer('projects');
             $table->integer('tasks');

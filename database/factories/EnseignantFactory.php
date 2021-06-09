@@ -12,7 +12,7 @@ $factory->define(Enseignant::class, function (Faker $faker) {
         'prenom'=>$faker->lastName,
         'email' =>$faker->unique()->email,
         'gender'=>$faker->randomElements(['male', 'female'])[0],
-        'department' =>$faker->randomElement(['Informatique', 'Génie Mecanique', 'Génie Electrique', 'Génie de Procédés', 'Sciences économiques et Gestion']),
+        'department' =>$faker->randomElement(['Informatique', 'GénieMecanique', 'GénieElectrique', 'GéniedeProcédés']),
         'picture' => 'http://lorempixel.com/640/480/people/'.$faker->randomDigitNotNull,
         'phone' => $faker->e164PhoneNumber,
         'projects' => $faker->randomDigit,

@@ -16,19 +16,15 @@
         </button>
     </div>
 @endif
-    <div class="page-bar">
+		<div class="page-bar">
             <div class="page-title-breadcrumb">
                      <div class=" pull-left">
-					    <div class="page-bar">
-            <div class="page-title-breadcrumb">
-                     <div class=" pull-left">
-								<div class="page-title">Edit Professor</div>
+								<div class="page-title"> Details Professor</div>
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
-								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-										href="/admin-dashboard">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{ route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li><a class="parent-item" href="/enseignants">Professor</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<li><a class="parent-item" href="{{ route('enseignants.index')}}">Professor</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
 								<li class="active">Details Professor</li>
 							</ol>
@@ -37,24 +33,22 @@
 					<div class="row">
 						<div class="col-md-12">
 							<!-- BEGIN SIDEBAR -->
-							<div class="profile-sidebar" style="width: 28rem;">
+							<div class="profile-sidebar" style="width: 31rem; ">
 								<div class="card card-topline-aqua">
-									<div class="card-body no-padding height-9">
+									<div class="card-body no-padding height-2">
 										<div class="row">
 											<div class="profile-userpic">
-												<img src="{{ asset('assets/img/user.jpg')}}" class="img-responsive" alt=""> </div>
-                                                <!--<img src="{/{ asset('storage/'.$enseignant->picture) }}" alt="{/{ $enseignant->name }}" class="img-responsive"> </div>-->
+                                                <img src="{{ asset('storage/'.$enseignant->picture) }}" alt="{{ $enseignant->name }}" class="img-responsive" name="picture" id="picture" > </div>
 										         </div>
+												 </div>
 										<div class="profile-usertitle">
-											<div class="profile-usertitle-name"> {{ $enseignant->nom.' '.$enseignant->prenom  }}</div>
-										<!--	<div class="profile-usertitle-job"> Jr. Professor </div>-->
+										<div class="profile-usertitle-name"> {{ $enseignant->nom.' '.$enseignant->prenom  }}</div>
+										<div class="profile-usertitle-job"> Jr. Professor </div>
 										</div>
 									<div class="card-body no-padding height-9">
-										<!--<div class="profile-desc">
-											Hello I am //{/{// $enseignant->nom.' '.$enseignant->prenom  }} a Professor in xyz College Surat. I love to work with
-											all my college staff and seniour
-											professors.
-										</div>-->
+										<div class="profile-desc">
+											<p>Hello I am {{ $enseignant->nom.' '.$enseignant->prenom  }} a Professor in Iset Bizerte.</p>
+										</div>
 										<ul class="list-group list-group-unbordered">
 											<li class="list-group-item">
 												<b>Gender </b>
@@ -107,7 +101,7 @@
 										<!-- END SIDEBAR BUTTONS -->
 									</div>
 								</div>
-								<div class="card" style="width: 38rem;">
+								<!--<div class="card" style="width: 38rem;">
 									<div class="card-head card-topline-aqua">
 										<header>Work Expertise</header>
 									</div>
@@ -155,7 +149,7 @@
 										</div>
 									</div> 
 									</div>
-                                     <!--<div class="card" style="width: 38rem;">
+                                     <div class="card" style="width: 38rem;">
 									<div class="card-head card-topline-aqua">
 										<header>Address</header>
 									</div>

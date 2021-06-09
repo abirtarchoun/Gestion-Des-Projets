@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Ens;
+namespace App\Http\Controllers\Admin;
 
-use App\Enseignant;
 use App\Http\Controllers\Controller;
+use App\Projet;
 use Illuminate\Http\Request;
 
-class EnseignantController extends Controller
+class ProjetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,7 @@ class EnseignantController extends Controller
      */
     public function index()
     {
-        
-            return view('Ens.Enseignant', ['enseignants' => Enseignant::paginate(6)]);
-        
-    
+        //
     }
 
     /**
@@ -45,10 +42,10 @@ class EnseignantController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Enseignant  $enseignant
+     * @param  \App\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function show(Enseignant $enseignant)
+    public function show(Projet $projet)
     {
         //
     }
@@ -56,10 +53,10 @@ class EnseignantController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Enseignant  $enseignant
+     * @param  \App\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function edit(Enseignant $enseignant)
+    public function edit(Projet $projet)
     {
         //
     }
@@ -68,10 +65,10 @@ class EnseignantController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Enseignant  $enseignant
+     * @param  \App\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Enseignant $enseignant)
+    public function update(Request $request, Projet $projet)
     {
         //
     }
@@ -79,10 +76,10 @@ class EnseignantController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Enseignant  $enseignant
+     * @param  \App\Projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Enseignant $enseignant)
+    public function destroy(Projet $projet)
     {
         //
     }

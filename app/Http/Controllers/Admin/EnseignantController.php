@@ -36,16 +36,50 @@ class EnseignantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
         $validatedData = $request->validate($this->validationRules());
          // mass assignment
+       $validatedData['picture'] = $request->picture->store('uploads','public');
         
-        $enseignant = Enseignant::create($validatedData);
-
-        return redirect()->route('enseignants.show', $enseignant)->with('storeEnseignant', "Enseignant has been added successfuly");
+       $enseignant = Enseignant::create($validatedData);
+       
+       return redirect()->route('enseignants.show', $enseignant)->with('storeEnseignant', "Enseignant has been added successfuly");
     
 
     }
+      /*$enseignant=new Enseignant();
+       $enseignant->nom = $request->input('nom');
+       $enseignant->prenom= $request->input('prenom');
+       $enseignant->email= $request->input('email');
+       $enseignant->department= $request->input('department');
+       $enseignant->projects= $request->input('projects');
+       $enseignant->tasks= $request->input('tasks');
+       $enseignant->joining_date= $request->input('joining_date');
+       $enseignant->uploads= $request->input('uploads');
+       $enseignant->phone= $request->input('phone');
+       $enseignant->gender= $request->input('gender');
+       $enseignant->adresse= $request->input('adresse');
+       if($request->hasFile('picture')){
+                             $file=$request->file('picture');
+                             $extension=$file->getClientOriginalExtension();
+        //filename to store
+                                 $filename = time() . '.' . $extension;
+                                  $file->move('uploads/images',$filename);
+       // $file->move('public/img',$filename);
+                                    $enseignant->picture=$filename;
+        //upload
+       }
+
+       else{
+
+        return $request;
+        $enseignant->picture='';
+             
+           }
+    
+              $enseignant->save();* }/
+
+    
 
     /**
      * Display the specified resource.
@@ -66,7 +100,6 @@ class EnseignantController extends Controller
      */
     public function edit(Enseignant $enseignant)
     {
-        
         return view('admin.enseignant.edit', ['enseignant' => $enseignant]);
     }
 
@@ -100,14 +133,14 @@ class EnseignantController extends Controller
     private function validationRules()
     {
         return [
-            'nom' => 'required|min:2',
-            'prenom' => 'required|min:2',
+            'nom' => 'required|string',
+            'prenom' => 'required|string',
             'phone' => 'required',
             'email' => 'required|email',
             'adresse' => 'required|max:255',
-            'department' => 'required',
-            'gender' => 'required',
-            'picture' => 'required| max:1000',
+            'department' => 'required|string',
+            'gender' => 'required|string',
+            'picture' => 'required|file|image',
             'joining_date'=> 'required|date',
         ];
     }

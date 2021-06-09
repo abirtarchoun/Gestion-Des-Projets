@@ -9,7 +9,7 @@
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-										href="index-2.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+										href="{{ route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
 								<li><a class="parent-item" href="#">UI</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>

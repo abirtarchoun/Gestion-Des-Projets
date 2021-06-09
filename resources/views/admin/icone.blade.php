@@ -8,7 +8,7 @@
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                        href="/admin-dashboard">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                        href="{{ route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li><a class="parent-item" href="#">UI Elements</a>&nbsp;<i
                                         class="fa fa-angle-right"></i>
@@ -29,7 +29,7 @@
                                     </li>
                                 </ul> -->
 								<ul class="nav customtab nav-tabs" role="tablist">
-									<li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">Font awesome
+									<li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">Font gittawesome
                                             Icons</a></li>
 									<li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">Simple Line
                                             Icons</a></li>
