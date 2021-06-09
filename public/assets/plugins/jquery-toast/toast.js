@@ -38,6 +38,17 @@ $(document).ready(function() {
           });
 
      });
+	 $(".Success").on("click",function(){
+		$.toast({
+		 text: 'Suppression effectuter avec succes.',
+		 position: 'top-right',
+		 loaderBg:'#ff6849',
+		 icon: 'success',
+		 hideAfter: 5000, 
+		 stack: 6
+	   });
+
+  });
 
       $(".tstError").on("click",function(){
            $.toast({

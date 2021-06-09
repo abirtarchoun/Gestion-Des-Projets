@@ -11,108 +11,88 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'HomeController@welcome')->name('welcome');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')->group(function () {
+    Route::get('/home', 'HomeController@index')->name('home');
 
-//*******************************  Dashboard Admin  view ********************************************//
+    // admin middleware route group
+    Route::middleware('admin')->namespace('Admin')->prefix('admin')->group(function () {
+        
+        Route::get('/dashboard', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard');
+        
+        Route::get('/admin-dashboard2', function () {
+            return view('admin.dashboard2');
+           })->name('admin.dashboard2');
+        
+           Route::get('/admin-dashboard3', function () {
+            return view('admin.dashboard3');
+             })->name('admin.dashboard3');
+           
+         Route::get('/admin-vectorMaps', function () {
+         return view('admin.vectorMaps');
+         })->name('admin.vectorMaps');
 
-Route::get('/admin-dashboard', function () {
-    return view('admin.dashboard');
-})->middleware('auth', 'admin')->name('admin.dashboard');
+         Route::get('/admin-Apexchart', function () {
+            return view('admin.Apexchart');
+        })->name('admin.Apexchart');
+        
+        Route::get('/admin-Amcharts', function () {
+        return view('admin.Amcharts');
+        })->name('admin.Amcharts');
+        
+        Route::get('/admin-events', function () {
+        return view('admin.events');
+        })->name('admin.events');
 
-Route::get('/admin-dashboard2', function () {
-    return view('admin.dashboard2');
-})->middleware('auth', 'admin')->name('admin.dashboard2');
+       Route::get('/admin-MorrisChart', function () {
+       return view('admin.MorrisChart');
+        })->name('admin.MorrisChart');
 
-Route::get('/admin-dashboard3', function () {
-    return view('admin.dashboard3');
-})->middleware('auth', 'admin')->name('admin.dashboard3');
+        Route::get('/admin-ChartJs', function () {   
+        return view('admin.ChartJs');
+        })->name('admin.ChartJs');
 
-//*******************************  victor Map  view ********************************************//
+        Route::get('/admin-alerte', function () {
+         return view('admin.alerte');  
+        })->name('admin.alerte'); 
 
+           Route::get('/admin-notification', function () {
+           return view('admin.notification');
+           })->name('admin.notification');
 
-Route::get('/admin-vectorMaps', function () {
-    return view('admin.vectorMaps');
-})->middleware('auth', 'admin')->name('admin.vectorMaps');
+          Route::get('/admin-boutton', function () {
+          return view('admin.boutton');
+          })->name('admin.boutton');
 
-//*******************************  Apex Chart view ********************************************//
+          Route::get('/admin-panel', function () {  
+           return view('admin.panel');
+           })->name('admin.panel');
 
-Route::get('/admin-Apexchart', function () {
-    return view('admin.Apexchart');
-})->middleware('auth', 'admin')->name('admin.Apexchart');
+           Route::get('/admin-gride', function () {
+           return view('admin.gride');
+           })->name('admin.gride');
 
-//*******************************  AMChart view ********************************************//
+          Route::get('/admin-carousel', function () {
+          return view('admin.carousel');
+           })->name('admin.carousel');
 
-Route::get('/admin-Amcharts', function () {
-    return view('admin.Amcharts');
-})->middleware('auth', 'admin')->name('admin.Amcharts');
+          Route::get('/admin-icone', function () {
+           return view('admin.icone');
+          })->name('admin.icone');
 
-//*******************************  Chart Morris  view ********************************************//
-
-Route::get('/admin-events', function () {
-    return view('admin.events');
-})->middleware('auth', 'admin')->name('admin.events');
-    
-//*******************************  BChart Morris  view ********************************************//
-
-Route::get('/admin-MorrisChart', function () {
-    return view('admin.MorrisChart');
-})->middleware('auth', 'admin')->name('admin.MorrisChart');
-
-//*******************************  Charts JS  view ********************************************//
-
-Route::get('/admin-ChartJs', function () {
-    return view('admin.ChartJs');
-})->middleware('auth', 'admin')->name('admin.ChartJs');
-//******************************* alerte view ********************************************//
-Route::get('/admin-alerte', function () {
-    return view('admin.alerte');
-})->middleware('auth', 'admin')->name('admin.alerte');
-
-//*******************************  Notification  view ********************************************//
-Route::get('/admin-notification', function () {
-    return view('admin.notification');
-})->middleware('auth', 'admin')->name('admin.notification');
-
-//*******************************  Boutton  view********************************************//
-Route::get('/admin-boutton', function () {
-    return view('admin.boutton');
-})->middleware('auth', 'admin')->name('admin.boutton');
-
-
-//*******************************  Panel  view********************************************//
-Route::get('/admin-panel', function () {
-    return view('admin.panel');
-})->middleware('auth', 'admin')->name('admin.panel');
-
-
-//*******************************  grid  view********************************************//
-Route::get('/admin-gride', function () {
-    return view('admin.gride');
-})->middleware('auth', 'admin')->name('admin.gride');
+          Route::resource('enseignants','EnseignantController');
+          Route::resource('projets','ProjetController');
+          Route::resource('etudiants','EtudiantController');
+          Route::resource('equipes','EquipeController');
+          
+          
 
 
-//*******************************  Carousel sildeshow view********************************************//
-Route::get('/admin-carousel', function () {
-    return view('admin.carousel');
-})->middleware('auth', 'admin')->name('admin.carousel');
-//******************************* icone view********************************************//
-Route::get('/admin-icone', function () {
-    return view('admin.icone');
-})->middleware('auth', 'admin')->name('admin.icone');
-
-
-//*******************************   Enseignant view ********************************************//
-
-Route::resource('enseignants','Admin\EnseignantController');
-
-//Route::get('/Ens', function () {
-   // return view('Ens.Enseignant');
-//});
-
-//Route::resource('enseignants', 'Ens\EnseignantController');
+    });
+});

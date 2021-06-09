@@ -185,25 +185,25 @@
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item   ">
-										<a href="/admin-dashboard" class="nav-link ">
+										<a href="{{ route('admin.dashboard')}}" class="nav-link ">
 											<span class="title">Dashboard 1</span>
 										</a>
 									</li>
 									<li class="nav-item active">
-										<a href="/admin-dashboard2" class="nav-link ">
+										<a href="{{ route('admin.dashboard2')}}" class="nav-link ">
 											<span class="title">Dashboard 2</span>
 											<span class="selected"></span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-dashboard3" class="nav-link ">
+										<a href="{{ route('admin.dashboard3')}}" class="nav-link ">
 											<span class="title">Dashboard 3</span>
 										</a>
 									</li>
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a href="/admin-events" class="nav-link nav-toggle"> <i class="material-icons">event</i>
+								<a href="{{ route('admin.events')}}" class="nav-link nav-toggle"> <i class="material-icons">event</i>
 									<span class="title">Event Management</span>
 								</a>
 							</li>
@@ -213,7 +213,7 @@
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="/enseignants" class="nav-link "> <span class="title">All
+										<a href="{{route('enseignants.index')}} " class="nav-link "> <span class="title">All
 												Professors</span>
 										</a>
 									</li>
@@ -241,6 +241,22 @@
 								</ul>
 							</li>
 							<li class="nav-item">
+								<a href="#" class="nav-link nav-toggle"><i class="material-icons">group</i>
+									<span class="title">Equipes</span><span class="arrow"></span></a>
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="all_students.html" class="nav-link "> <span class="title">All
+												Equipes</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="add_student.html" class="nav-link "> <span class="title">Add
+												Equipes</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
 								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">school</i>
 									<span class="title">Courses</span> <span class="arrow"></span>
 									<span class="label label-rouded label-menu label-success">new</span>
@@ -254,11 +270,6 @@
 									<li class="nav-item">
 										<a href="add_course.html" class="nav-link "> <span class="title">Add
 												Course</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="add_course_bootstrap.html" class="nav-link "> <span class="title">Add
-												Course Bootstrap</span>
 										</a>
 									</li>
 									
@@ -295,32 +306,32 @@
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="/admin-boutton" class="nav-link ">
+										<a href="{{ route('admin.boutton')}}" class="nav-link ">
 											<span class="title">Buttons</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-alerte" class="nav-link ">
+										<a href="{{ route('admin.alerte')}}" class="nav-link ">
 											<span class="title">Sweet Alert</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-notification" class="nav-link ">
+										<a href="{{ route('admin.notification')}}" class="nav-link ">
 											<span class="title">Notification</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-icone" class="nav-link ">
+										<a href="{{ route('admin.icone')}}" class="nav-link ">
 											<span class="title">Icons</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-panel" class="nav-link ">
+										<a href="{{ route('admin.panel')}}" class="nav-link ">
 											<span class="title">Panels</span>
 										</a>
 									</li>
 										<li class="nav-item active">
-										<a href="/admin-carousel" class="nav-link ">
+										<a href="{{ route('admin.carousel')}}" class="nav-link ">
 											<span class="title">Carousel</span>
 											<span class="selected"></span>
 										</a>
@@ -360,22 +371,22 @@
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="/admin-Apexchart" class="nav-link ">
+										<a href="{{ route('admin.Apexchart')}}" class="nav-link ">
 											<span class="title">Apex chart</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-Amcharts" class="nav-link ">
+										<a href="{{ route('admin.Amcharts')}}" class="nav-link ">
 											<span class="title">amChart</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-MorrisChart" class="nav-link ">
+										<a href="{{ route('admin.MorrisChart')}}" class="nav-link ">
 											<span class="title">Morris Charts</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-ChartJs" class="nav-link ">
+										<a href="{{ route('admin.ChartJs')}}" class="nav-link ">
 											<span class="title">Chartjs</span>
 										</a>
 									</li>
@@ -394,7 +405,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="/admin-vectorMaps" class="nav-link ">
+										<a href="{{ route('admin.vectorMaps')}}" class="nav-link ">
 											<span class="title">Vector Maps</span>
 										</a>
 									</li>

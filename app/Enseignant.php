@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enseignant extends Model
 {
-    protected $guarded = [];
+    protected $guarded = []; //l tous les champs acceptes mass asseigment #
+
     public function projets()
     {
         return $this->hasMany('App\Projet');
