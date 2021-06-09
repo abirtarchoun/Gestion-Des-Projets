@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Mail\NewEenseignant;
 use App\Enseignant;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 
 class EnseignantController extends Controller
 {
@@ -43,6 +45,8 @@ class EnseignantController extends Controller
         
        $enseignant = Enseignant::create($validatedData);
        
+       Mail::to($enseignant->email)->send(new NewEenseignant($enseignant));
+
        return redirect()->route('enseignants.show', $enseignant)->with('storeEnseignant', "Enseignant has been added successfuly");
     
 
