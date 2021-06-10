@@ -43,7 +43,7 @@ class EquipeController extends Controller
        
       $equipe = equipe::create($validatedData);
 
-      return redirect()->route('equipes.show', $equipe)->with('storeequipe', "equipe has been added successfuly");
+      return redirect()->route('equipes.show', $equipe)->with('storeEquipe', "equipe has been added successfuly");
    
 
     }
@@ -94,7 +94,7 @@ class EquipeController extends Controller
     {
       
         $equipe->delete();
-        return redirect()->route('equipes.index')->with('deleteequipe', 'equipe has been deleted!');
+        return redirect()->route('equipes.index')->with('deleteEquipe', 'equipe has been deleted!');
     }
     private function validationRules()
     {

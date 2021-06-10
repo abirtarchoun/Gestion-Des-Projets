@@ -250,7 +250,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="{{route('equipes.create')}}" class="nav-link "> <span class="title">Add
+										<a href="{{route('equipes.create' )}}" class="nav-link "> <span class="title">Add
 												Equipes</span>
 										</a>
 									</li>
@@ -263,13 +263,13 @@
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="all_courses.html" class="nav-link "> <span class="title">All
-												Courses</span>
+										<a href="{{ route('projets.index')}}" class="nav-link "> <span class="title">All
+												Projects</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="add_course.html" class="nav-link "> <span class="title">Add
-												Course</span>
+										<a href="{{ route('projets.create')}}"  class="nav-link "> <span class="title">Add
+												Projects</span>
 										</a>
 									</li>
 									

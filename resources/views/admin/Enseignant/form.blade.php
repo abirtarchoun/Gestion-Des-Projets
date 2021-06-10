@@ -110,7 +110,7 @@
 												<label class="control-label col-md-3">Uploads</label>
 												<div class="col-md-5">
 													<div class="input-group">
-                                                   <input type="number" class="form-control input-height"  name="uploads" value="{{$enseignant->uploads  ?? old('uploads ') }}" id="uploads " class="form-control @error('uploads ') is-invalid @enderror" placeholder=" uploads  goes here ">
+                                                   <input type="number" class="form-control input-height"  name="uploads" value="{{$enseignant->uploads }} ?? old('uploads ') }}" id="uploads " class="form-control @error('uploads ') is-invalid @enderror" placeholder=" uploads  goes here ">
                                                    @error('uploads')<div class="text-danger">{{ $message }}</div>@enderror
                                                </div>
 											</div>

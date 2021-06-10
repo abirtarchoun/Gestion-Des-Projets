@@ -3,7 +3,7 @@
     <div class="page-bar">
             <div class="page-title-breadcrumb">
                      <div class=" pull-left">
-								<div class="page-title">Add Professor</div>
+								<div class="page-title">Add Equipes</div>
 							</div>
 							@include('layouts.basicinfo')
                              <form action="{{ route('equipes.store') }}" id="form_sample_1" class="form-horizontal"method="post" enctype="multipart/form-data">

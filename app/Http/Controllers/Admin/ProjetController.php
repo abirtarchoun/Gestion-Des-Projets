@@ -11,7 +11,7 @@ class ProjetController extends Controller
     public function index()
     {
         
-        return view('admin.equipe.index', ['equipes' =>Projet::paginate(100)]);
+        return view('admin.projet.index', ['projets' =>Projet::paginate(100)]);
     }
 
     /**
@@ -21,7 +21,7 @@ class ProjetController extends Controller
      */
     public function create()
     { 
-        return view('admin.equipe.create');
+        return view('admin.projet.create');
     }
 
     /**
@@ -36,9 +36,9 @@ class ProjetController extends Controller
         
         // mass assignment
        
-      $equipe = equipe::create($validatedData);
+      $projet = projet::create($validatedData);
 
-      return redirect()->route('equipes.show', $equipe)->with('storeequipe', "equipe has been added successfuly");
+      return redirect()->route('projets.show', $projet)->with('storeprojet', "projet has been added successfuly");
    
 
     }
@@ -46,51 +46,51 @@ class ProjetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Equipe  $equipe
+     * @param  \App\projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function show(Equipe $equipe)
+    public function show(projet $projet)
     {
-        return view('admin.equipe.show', ['equipe' => $equipe]);
+        return view('admin.projet.show', ['projet' => $projet]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Equipe  $equipe
+     * @param  \App\projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function edit(Equipe $equipe)
+    public function edit(projet $projet)
     {
         
-        return view('admin.equipe.edit', ['equipe' => $equipe]);
+        return view('admin.projet.edit', ['projet' => $projet]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Equipe  $equipe
+     * @param  \App\projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Equipe $equipe)
+    public function update(Request $request, projet $projet)
  
     {   $validatedData = $request->validate($this->validationRules());
-        $equipe->update($validatedData);
+        $projet->update($validatedData);
 
-        return redirect()->route('equipes.show', $equipe)->with('updateequipe', "equipe has been updated successfuly");
+        return redirect()->route('projets.show', $projet)->with('updateprojet', "projet has been updated successfuly");
     }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Equipe  $equipe
+     * @param  \App\projet  $projet
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Equipe $equipe)
+    public function destroy(projet $projet)
     {
       
-        $equipe->delete();
-        return redirect()->route('equipes.index')->with('deleteequipe', 'equipe has been deleted!');
+        $projet->delete();
+        return redirect()->route('projets.index')->with('deleteprojet', 'projet has been deleted!');
     }
     private function validationRules()
     {

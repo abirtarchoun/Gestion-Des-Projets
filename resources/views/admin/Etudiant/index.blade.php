@@ -9,9 +9,9 @@
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
 										href="{{ route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li><a class="parent-item" href={{ route('etudiants.index') }}>Students</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<li><a class="parent-item" href={{ route('etudiants.index') }}>Studentss</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li class="active">Professors List</li>
+								<li class="active">Students List</li>
 							</ol>
 						</div>
 					</div>
@@ -30,7 +30,7 @@
 											<div class="col-md-12">
 												<div class="card card-box">
 													<div class="card-head">
-														<header>All Professors</header>
+														<header>All Students</header>
 														<div class="tools">
 															<a class="fa fa-repeat btn-color box-refresh"
 																href="javascript:;"></a>

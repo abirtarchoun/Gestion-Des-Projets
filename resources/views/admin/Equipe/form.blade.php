@@ -1,7 +1,7 @@
           @csrf
 		  <div class="form-body">
-									<div class="form-group row">
-										<label for="nom" class="control-label col-md-3">Libelle</label>
+          <div class="form-group row"> 
+          <label for="nom" class="control-label col-md-3">Libelle</label>
 											<div class="col-md-5">
 													 <input type="text"class="form-control input-height" name="libelle" value="{{ $equipe->libelle ?? old('libelle') }}" id="nom" class="form-control @error('libelle') is-invalid @enderror @error('libelle') is-invalid @enderror" placeholder="libellegoes here">
                                                       @error('libelle')<div class="text-danger">{{ $message }}</div>@enderror
