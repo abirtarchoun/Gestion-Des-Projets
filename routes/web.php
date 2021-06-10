@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/etudiant-dashboard', function () {
+    return view('etudiant.home');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -52,6 +56,9 @@ Route::get('/admin-Amcharts', function () {
     return view('admin.Amcharts');
 })->middleware('auth', 'admin')->name('admin.Amcharts');
 
+Route::get('/zied', function(){
+    return 'zied test';
+});
 //*******************************  Chart Morris  view ********************************************//
 
 Route::get('/admin-events', function () {
@@ -105,11 +112,13 @@ Route::get('/admin-carousel', function () {
 Route::get('/admin-icone', function () {
     return view('admin.icone');
 })->middleware('auth', 'admin')->name('admin.icone');
+     
 
 
 //*******************************   Enseignant view ********************************************//
 
 Route::resource('enseignants','Admin\EnseignantController');
+Route::resource('etudiant','Etudiant\EtudiantController');
 
 //Route::get('/Ens', function () {
    // return view('Ens.Enseignant');
