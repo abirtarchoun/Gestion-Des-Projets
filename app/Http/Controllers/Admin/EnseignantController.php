@@ -146,6 +146,9 @@ class EnseignantController extends Controller
             'gender' => 'required|string',
             'picture' => 'required|file|image',
             'joining_date'=> 'required|date',
+            'uploads'=>'required|numeric',
+            'tasks'=>'required|numeric',
+            'projects'=>'required|numeric',
         ];
     }
 }

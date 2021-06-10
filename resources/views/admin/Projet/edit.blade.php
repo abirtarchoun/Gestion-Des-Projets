@@ -3,15 +3,15 @@
     <div class="page-bar">
             <div class="page-title-breadcrumb">
                      <div class=" pull-left">
-								<div class="page-title">Edit Students</div>
+								<div class="page-title">Edit projet</div>
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
 										href="{{ route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li><a class="parent-item" href="{{ route('etudiants.index') }}">Students</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<li><a class="parent-item" href="{{ route('projets.index') }}">Projet</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li class="active">Add Students</li>
+								<li class="active">Add projet</li>
 							</ol>
 						</div>
 					</div>
@@ -35,10 +35,10 @@
 											here</li>
 									</ul>
 								</div>
-           <form action="{{ route('etudiants.update', ['etudiant' => $etudiant->id]) }}" method="post" enctype="multipart/form-data">
+           <form action="{{ route('projets.update', ['projet' => $projet->id]) }}" method="post" enctype="multipart/form-data">
            <div class="card-body" id="bar-parent">
             @method('PUT')
-            @include('admin.etudiant.form')
+            @include('admin.projet.form')
         </form>
     </div>
     </div>

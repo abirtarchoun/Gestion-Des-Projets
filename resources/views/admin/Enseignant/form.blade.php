@@ -1,26 +1,21 @@
           @csrf
 		  <div class="form-body">
 									<div class="form-group row">
-										<label for="nom" class="control-label col-md-3">First Name
-													
-												</label>
+										<label for="nom" class="control-label col-md-3">First Name</label>
 											<div class="col-md-5">
 													 <input type="text"class="form-control input-height" name="nom" value="{{ $enseignant->nom ?? old('nom') }}" id="nom" class="form-control @error('nom') is-invalid @enderror @error('nom') is-invalid @enderror" placeholder="Firstname goes here">
                                                       @error('nom')<div class="text-danger">{{ $message }}</div>@enderror
                                                  </div>
 											</div>
 											<div class="form-group row">
-												<label  for="prenom" class="control-label col-md-3">Last Name
-													
-												</label>
+												<label  for="prenom" class="control-label col-md-3">Last Name</label>
 													<div class="col-md-5">
 													 <input type="text"class="form-control input-height" name="prenom" value="{{ $enseignant->prenom ?? old('prenom') }}" id="prenom" class="form-control @error('prenom') is-invalid @enderror @error('prenom') is-invalid @enderror" placeholder="lastname goes here">
                                                       @error('prenom')<div class="text-danger">{{ $message }}</div>@enderror
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="control-label col-md-3">Email
-												</label>
+												<label class="control-label col-md-3">Email</label>
 												<div class="col-md-5">
 													<div class="input-group">
 														<span class="input-group-addon">
@@ -31,6 +26,7 @@
                                                 </div>
 												</div>
 											</div>
+											
 											<div class="form-group row">
 												<label for =" joining_date" class="control-label col-md-3">Joining Date</label>
 												<div class="col-md-5">
@@ -66,9 +62,7 @@
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="control-label col-md-3">Gender
-												
-												</label>
+												<label class="control-label col-md-3">Gender</label>
 												<div class="col-md-5">
 											     <select type=" text" name="gender" class="form-control input-height" id="gender">
                                                 <option value="">Select Gender..</option>
@@ -79,23 +73,47 @@
 												</div>
 											</div>
 											<div class="form-group row">
-												<label class="control-label col-md-3">Mobile No.
-													
-												</label>
+												<label class="control-label col-md-3">Mobile No.</label>
 												<div class="col-md-5">
 												<input type="number" class="form-control input-height" name="phone" value="{{ $enseignant->phone ?? old('phone') }}" id="phone" class="form-control @error('phone') is-invalid @enderror" placeholder="+21612345678">
                                                    @error('phone')<div class="text-danger">{{ $message }}</div>@enderror
                                              </div>
 											</div>
 											<div class="form-group row">
-												<label class="control-label col-md-3">Address
-												</label>
+												<label class="control-label col-md-3">Address</label>
 												<div class="col-md-5">
                                                 <input class="form-control input-height" type="text" name="adresse" value="{{ $enseignant->adresse ?? old('adresse') }}" id="adresse" class="form-control @error('adresse') is-invalid @enderror" placeholder="Address goes here">
                                                  @error('adresse')<div class="text-danger">{{ $message }}</div>@enderror
 												</div>
                                                 </div>
 												</div>
+											</div>
+											<div class="form-group row">
+												<label class="control-label col-md-3">Projects</label>
+												<div class="col-md-5">
+													<div class="input-group">
+                                                   <input type="number" class="form-control input-height"  name="projects" value="{{ $enseignant->projects ?? old('projects') }}" id="projects " class="form-control @error('projects') is-invalid @enderror" placeholder=" projects  goes here ">
+                                                   @error('projects')<div class="text-danger">{{ $message }}</div>@enderror
+                                               </div>
+											</div>
+											</div>
+											<div class="form-group row">
+												<label class="control-label col-md-3">Tasks</label>
+												<div class="col-md-5">
+													<div class="input-group">
+                                                   <input type="number" class="form-control input-height"  name="tasks" value="{{ $enseignant->tasks  ?? old('tasks ') }}" id="tasks " class="form-control @error('tasks ') is-invalid @enderror" placeholder=" tasks  goes here ">
+                                                   @error('tasks')<div class="text-danger">{{ $message }}</div>@enderror
+                                               </div>
+											</div>
+											</div>
+											<div class="form-group row">
+												<label class="control-label col-md-3">Uploads</label>
+												<div class="col-md-5">
+													<div class="input-group">
+                                                   <input type="number" class="form-control input-height"  name="uploads" value="{{$enseignant->uploads }} ?? old('uploads ') }}" id="uploads " class="form-control @error('uploads ') is-invalid @enderror" placeholder=" uploads  goes here ">
+                                                   @error('uploads')<div class="text-danger">{{ $message }}</div>@enderror
+                                               </div>
+											</div>
 											</div>
                                             <div class="form-group row">
 												<label class="control-label col-md-3">Picture</label>

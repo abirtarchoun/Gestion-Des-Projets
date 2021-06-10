@@ -93,7 +93,7 @@
 								<div class="profile-userbuttons"><a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-warning" title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">Edit</a>
                                         <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger " title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}"onclick="event.preventDefault(); document.querySelector('#delete-enseignant-form').submit()"> Delete
                                         <i class="fas fa-user-slash"></i></a>
-                                          ><i class="fas fa-user-slash"></i></a>
+                                          <i class="fas fa-user-slash"></i></a>
                  <form action="{{ route('enseignants.destroy', ['enseignant' => $enseignant->id]) }}" method="post" id="delete-enseignant-form">@csrf @method('DELETE')</form>
 										</div>
                                          <hr>
