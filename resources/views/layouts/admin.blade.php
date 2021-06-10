@@ -245,12 +245,12 @@
 									<span class="title">Equipes</span><span class="arrow"></span></a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="all_students.html" class="nav-link "> <span class="title">All
+										<a href="{{route('equipes.index')}}"  class="nav-link "> <span class="title">All
 												Equipes</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="add_student.html" class="nav-link "> <span class="title">Add
+										<a href="{{route('equipes.create')}}" class="nav-link "> <span class="title">Add
 												Equipes</span>
 										</a>
 									</li>
@@ -357,7 +357,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="email_compose.html" class="nav-link ">
+										<a href= "email_compose.html" class="nav-link ">
 											<span class="title">Compose Mail</span>
 										</a>
 									</li>
@@ -419,7 +419,6 @@
 								</a>
 								</ul>
 							     </li>
-									
 								</ul>
 							</li>
 						</ul>
@@ -439,8 +438,7 @@
 	<!-- start js include path -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0/jquery.blockUI.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="{{asset('assets/plugins/popper/popper.js')}}" defer></script>
-	<script src="{{asset('assets/plugins/jquery-blockui/jquery.blockui.min.js')}}" defer></script>
+	<script src="{{asset('assets/plugins/popper/popper.js')}}" defer></script><script src="{{asset('assets/plugins/jquery-blockui/jquery.blockui.min.js')}}" defer></script>
 	<script src="{{asset('assets/plugins/jquery-slimscroll/jquery.slimscroll.js')}}"defer></script>
 	<!-- bootstrap -->
 	<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"defer></script>

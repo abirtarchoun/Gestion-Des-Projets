@@ -15,7 +15,8 @@ class EquipeController extends Controller
      */
     public function index()
     {
-        //
+        
+        return view('admin.equipe.index', ['equipes' => Equipe::paginate(100)]);
     }
 
     /**
@@ -24,8 +25,8 @@ class EquipeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    { 
+        return view('admin.equipe.create');
     }
 
     /**
@@ -35,8 +36,16 @@ class EquipeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    { 
+        $validatedData = $request->validate($this->validationRules());
+        
+        // mass assignment
+       
+      $equipe = equipe::create($validatedData);
+
+      return redirect()->route('equipes.show', $equipe)->with('storeequipe', "equipe has been added successfuly");
+   
+
     }
 
     /**
@@ -47,7 +56,7 @@ class EquipeController extends Controller
      */
     public function show(Equipe $equipe)
     {
-        //
+        return view('admin.equipe.show', ['equipe' => $equipe]);
     }
 
     /**
@@ -58,7 +67,7 @@ class EquipeController extends Controller
      */
     public function edit(Equipe $equipe)
     {
-        //
+        return view('admin.equipe.edit', ['equipe' => $equipe]);
     }
 
     /**
@@ -69,10 +78,12 @@ class EquipeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Equipe $equipe)
-    {
-        //
-    }
+ 
+    {   $validatedData = $request->validate($this->validationRules());
+        $equipe->update($validatedData);
 
+        return redirect()->route('equipes.show', $equipe)->with('updateEquipe', "equipe has been updated successfuly");
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -81,6 +92,19 @@ class EquipeController extends Controller
      */
     public function destroy(Equipe $equipe)
     {
-        //
+      
+        $equipe->delete();
+        return redirect()->route('equipes.index')->with('deleteequipe', 'equipe has been deleted!');
     }
+    private function validationRules()
+    {
+        return [
+            'libelle' => 'required|string',
+            'projet_id'=>'required|numeric',
+          
+        ];
+    }
+
+
+
 }
