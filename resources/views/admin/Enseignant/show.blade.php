@@ -88,78 +88,20 @@
 												<div class="uppercase profile-stat-text"> Uploads </div>
 											</div>
 										</div>
-									</div>
+								
 								</div>
-								<div class="profile-userbuttons"><a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-warning" title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">Edit</a>
+								<div class="profile-userbuttons">
+								<a href="{{ route('enseignants.edit', ['enseignant' => $enseignant->id]) }}"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-warning" title="Edit user {{ $enseignant->nom.' '.$enseignant->prenom  }}">Edit</a>
                                         <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger " title="Delete user {{ $enseignant->nom.' '.$enseignant->prenom  }}"onclick="event.preventDefault(); document.querySelector('#delete-enseignant-form').submit()"> Delete
                                         <i class="fas fa-user-slash"></i></a>
                                           <i class="fas fa-user-slash"></i></a>
-                 <form action="{{ route('enseignants.destroy', ['enseignant' => $enseignant->id]) }}" method="post" id="delete-enseignant-form">@csrf @method('DELETE')</form>
+                             <form action="{{ route('enseignants.destroy', ['enseignant' => $enseignant->id]) }}" method="post" id="delete-enseignant-form">@csrf @method('DELETE')</form>
 										</div>
+											</div>
                                          <hr>
                                         <br>
 										<!-- END SIDEBAR BUTTONS -->
 									</div>
 								</div>
-								<!--<div class="card" style="width: 38rem;">
-									<div class="card-head card-topline-aqua">
-										<header>Work Expertise</header>
-									</div>
-									<div class="card-body no-padding height-9">
-										<div class="work-monitor work-progress">
-											<div class="states">
-												<div class="info">
-													<div class="desc pull-left">Java</div>
-													<div class="percent pull-right">50%</div>
-												</div>
-												<div class="progress progress-xs">
-													<div class="progress-bar progress-bar-danger progress-bar-striped active"
-														role="progressbar" aria-valuenow="40" aria-valuemin="0"
-														aria-valuemax="100" style="width: 70%">
-														<span class="sr-only">50% </span>
-													</div>
-												</div>
-											</div>
-											<div class="states">
-												<div class="info">
-													<div class="desc pull-left">Php</div>
-													<div class="percent pull-right">85%</div>
-												</div>
-												<div class="progress progress-xs">
-													<div class="progress-bar progress-bar-success progress-bar-striped active"
-														role="progressbar" aria-valuenow="40" aria-valuemin="0"
-														aria-valuemax="100" style="width: 45%">
-														<span class="sr-only">85% </span>
-													</div>
-												</div>
-											</div>
-											<div class="states">
-												<div class="info">
-													<div class="desc pull-left">Android</div>
-													<div class="percent pull-right">20%</div>
-												</div>
-												<div class="progress progress-xs">
-													<div class="progress-bar progress-bar-info progress-bar-striped active"
-														role="progressbar" aria-valuenow="40" aria-valuemin="0"
-														aria-valuemax="100" style="width: 35%">
-														<span class="sr-only">20% </span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div> 
-									</div>
-                                     <div class="card" style="width: 38rem;">
-									<div class="card-head card-topline-aqua">
-										<header>Address</header>
-									</div>
-									<div class="card-body no-padding height-9">
-										<div class="row text-center m-t-10">
-											<div class="col-md-12">
-											</div>
-										</div>
-									</div>
 								</div>
-								</div>
-							</div>-->
                             @endsection

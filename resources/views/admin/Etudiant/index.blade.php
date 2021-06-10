@@ -58,9 +58,9 @@
 																	</a>
 																	<ul class="dropdown-menu pull-right">
 																		<li>
-																			<a href="javascript:;">
-																				<i class="fa fa-print"></i> Print </a>
-																		</li>
+																		
+																		<button onclick="javascript:window.print();"class="btn btn-default btn-outline" type="button"> <span>
+																		<i class="fa fa-print"></i> Print</span> </button>
 																		<li>
 																			<a href="javascript:;">
 																				<i class="fa fa-file-pdf-o"></i> Save as

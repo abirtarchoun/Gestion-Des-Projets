@@ -46,7 +46,6 @@
 													</div>
 												</div>
 											</div>
-											
 											<div class="form-group row">
 												<label class="control-label col-md-3">Departments</label>
 												<div class="col-md-5">
@@ -54,7 +53,7 @@
 														<option value="">Select...</option> 
                                                 <option type=" text" value="Informatique" @if (old('department') == "Informatique") {{ 'selected' }} @endif>Informatique</option>
                                                 <option value="GénieMecanique" @if (old('department') == "GénieMecanique") {{ 'selected' }} @endif>Génie Mecanique</option>
-                                                <option value="GénieElectriques" @if (old('department') == "GénieElectrique") {{ 'selected' }} @endif>Génie electrique</option>
+                                                <option value="GénieElectrique" @if (old('department') == "GénieElectrique") {{ 'selected' }} @endif>Génie electrique</option>
                                                 <option value="Géniedeprocédes" @if (old('department') == "Géniedeprocédes") {{ 'selected' }} @endif>Génie de Procédés</option>
                                                  @error('department')<div class="text-danger">{{ $message }}</div>@enderror
                                                  </select> 

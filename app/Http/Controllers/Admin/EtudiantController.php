@@ -81,6 +81,9 @@ class EtudiantController extends Controller
     public function update(Request $request, Etudiant $etudiant)
 
     {   $validatedData = $request->validate($this->validationRules());
+        
+        $validatedData['picture'] = $request->picture->store('uploads','public');
+        
         $etudiant->update($validatedData);
 
         return redirect()->route('etudiants.show', $etudiant)->with('updateEtudiant', "Etudiant has been updated successfuly");

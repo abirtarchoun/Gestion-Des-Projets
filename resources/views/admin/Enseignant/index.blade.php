@@ -7,15 +7,14 @@
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-										href="{{ route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+										href="{{route('admin.dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li><a class="parent-item" href={{ route('enseignants.index') }}>Professors</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<li><a class="parent-item" href="{{route('enseignants.index')}}">Professors</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
 								<li class="active">Professors List</li>
 							</ol>
 						</div>
-					</div>
-					 <div class="row">
+					</div> <div class="row">
 						<div class="col-md-12">
 							<div class="tabbable-line">
 								<ul class="nav customtab nav-tabs" role="tablist">
@@ -57,10 +56,9 @@
 																		<i class="fa fa-angle-down"></i>
 																	</a>
 																	<ul class="dropdown-menu pull-right">
-																		<li>
-																			<a href="javascript:;">
-																				<i class="fa fa-print"></i> Print </a>
-																		</li>
+																		<button onclick="javascript:window.print();"class="btn btn-default btn-outline" type="button"> <span>
+																		<i class="fa fa-print"></i> Print</span> </button>
+																		
 																		<li>
 																			<a href="javascript:;">
 																				<i class="fa fa-file-pdf-o"></i> Save as

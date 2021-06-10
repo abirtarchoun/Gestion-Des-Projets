@@ -11,7 +11,7 @@
                 <ul class="nav navbar-nav navbar-left in">
 					<li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
 				</ul>
-				<form class="search-form-opened" action="#" method="GET">
+			<form class="search-form-opened" action="#" method="GET">
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Search..." name="query">
 						<span class="input-group-btn">
@@ -21,7 +21,6 @@
 						</span>
 					</div>
 				</form>
-                </div>
     
     
     <div class="container">

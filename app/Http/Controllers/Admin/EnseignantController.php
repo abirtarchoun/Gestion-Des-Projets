@@ -116,6 +116,8 @@ class EnseignantController extends Controller
      */
     public function update(Request $request, Enseignant $enseignant)
     {   $validatedData = $request->validate($this->validationRules());
+        $validatedData['picture'] = $request->picture->store('uploads','public');
+
         $enseignant->update($validatedData);
 
         return redirect()->route('enseignants.show', $enseignant)->with('updateEnseignant', "Enseignant has been updated successfuly");
